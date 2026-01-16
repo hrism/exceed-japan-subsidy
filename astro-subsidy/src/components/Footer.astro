@@ -1,0 +1,43 @@
+---
+const baseUrl = 'https://exceed-japan.com';
+const themeUrl = '/subsidy/wp-content/themes/exceed-custom-theme';
+---
+
+<!-- SNS Section -->
+<div class="sns_content_flex">
+  <div><span class="sns_banner">お役立ち情報掲載中！</span></div>
+  <ul class="sns_content_icon_flex">
+    <li>
+      <a href="http://lin.ee/vd1Uvb0" target="_blank" rel="noopener noreferrer">
+        <img src={`${themeUrl}/images/sns-icon-line.webp`} alt="LINE" width="55" height="55">
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/exceed.hojokin?igsh=MTA3NHUyaTRkdzl1cg==" target="_blank" rel="noopener noreferrer">
+        <img src={`${themeUrl}/images/sns-icon-instagram.webp`} alt="Instagram" width="55" height="55">
+      </a>
+    </li>
+  </ul>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="footer_position">
+    <nav class="footer_nav">
+      <div>
+        <a href={baseUrl}>
+          <img src={`${themeUrl}/images/logo-footer.webp`} alt="エクシードのロゴ" width="184" height="52">
+        </a>
+      </div>
+      <ul class="footer_nav_list">
+        <li><a href={`${baseUrl}/#front-case-support`} class="footer_nav_list_a uppercase">Service</a></li>
+        <li><a href={`${baseUrl}/post_case/`} class="footer_nav_list_a uppercase">Case</a></li>
+        <li><a href={`${baseUrl}/company`} class="footer_nav_list_a uppercase">Company</a></li>
+        <li><a href={`${baseUrl}/recruit`} class="footer_nav_list_a uppercase">Recruit</a></li>
+        <li><a href={`${baseUrl}/#community`} class="footer_nav_list_a uppercase">Community</a></li>
+        <li><a href={`${baseUrl}/contact`} class="footer_nav_list_a uppercase footer_contact_btn">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer_small"><small>&copy; 2025 EXCEED</small></div>
+</footer>

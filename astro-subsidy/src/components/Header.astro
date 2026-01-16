@@ -1,0 +1,53 @@
+---
+const baseUrl = 'https://exceed-japan.com';
+const themeUrl = '/subsidy/wp-content/themes/exceed-custom-theme';
+---
+
+<header class="main_header bg-white">
+  <div class="header_position !relative w-full overflow-hidden">
+    <nav class="header_nav">
+      <div>
+        <a href={baseUrl}>
+          <img src={`${themeUrl}/images/logo-footer.webp`} alt="エクシードのロゴ" class="!h-4 md:!h-[21px] w-auto">
+        </a>
+      </div>
+      <ul class="header_nav_list">
+        <li><a href={`${baseUrl}/#front-case-support`} class="header_nav_list_a uppercase !text-gray-700 hover:border-b-2 hover:border-red-600">Service</a></li>
+        <li><a href={`${baseUrl}/post_case/`} class="header_nav_list_a uppercase !text-gray-700 hover:border-b-2 hover:border-red-600">Case</a></li>
+        <li><a href={`${baseUrl}/company`} class="header_nav_list_a uppercase !text-gray-700 hover:border-b-2 hover:border-red-600">Company</a></li>
+        <li><a href={`${baseUrl}/recruit`} class="header_nav_list_a uppercase !text-gray-700 hover:border-b-2 hover:border-red-600">Recruit</a></li>
+        <li><a href={`${baseUrl}/#community`} class="header_nav_list_a uppercase !text-gray-700 hover:border-b-2 hover:border-red-600">Community</a></li>
+        <li><a href={`${baseUrl}/contact`} class="header_nav_list_a uppercase contact_btn bg-primary text-white px-4 py-1.5 rounded-full">Contact</a></li>
+      </ul>
+      <div class="hamburger-menu">
+        <button class="menu-toggle !top-[18px]" aria-label="メニューを開く/閉じる">MENU</button>
+        <nav class="menu-content">
+          <div class="menu-content-flex">
+            <div>
+              <a href={baseUrl}>
+                <img src={`${themeUrl}/images/logo-footer.webp`} alt="エクシードのロゴ" class="!h-4 md:!h-[21px] w-auto">
+              </a>
+            </div>
+            <ul>
+              <li><a href={`${baseUrl}/#front-case-support`} class="uppercase">サービス紹介</a></li>
+              <li><a href={`${baseUrl}/post_case/`} class="uppercase">導入事例</a></li>
+              <li><a href={`${baseUrl}/#community`} class="uppercase">新規経営者＆女性経営者向け<br class="br-sp">コミュニティ</a></li>
+              <li><a href={`${baseUrl}/company`} class="uppercase">会社情報</a></li>
+              <li><a href={`${baseUrl}/recruit`} class="uppercase">採用情報</a></li>
+              <li><a href={`${baseUrl}/contact`} class="header_nav_list_a uppercase">お問合わせ</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menuContent = document.querySelector('.menu-content');
+
+  menuToggle?.addEventListener('click', () => {
+    menuContent?.classList.toggle('open');
+  });
+</script>

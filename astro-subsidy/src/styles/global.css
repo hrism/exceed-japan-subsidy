@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #F20505;
+  --color-primary-dark: #d10404;
+  --font-family-sans: "Poppins", sans-serif;
+  --font-family-display: "Oswald", sans-serif;
+}
+
+body {
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* reset.cssのリセットを上書き - Tailwindのユーティリティクラスを有効にする */
+ul, li, p, h1, h2, h3, h4, body, figure, blockquote, dl, dd {
+  padding: revert-layer;
+  margin: revert-layer;
+}
+
+a {
+  color: revert-layer;
+}
+
+

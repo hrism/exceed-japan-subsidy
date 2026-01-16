@@ -1,0 +1,290 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const themeUrl = '/subsidy/wp-content/themes/exceed-custom-theme';
+---
+
+<Layout title="中小企業新事業進出補助金 | Exceed Japan">
+  <Header />
+
+  <!-- メインビジュアル -->
+  <section class="relative min-h-[70vh] flex items-center justify-center bg-gradient-to-br from-primary to-primary-dark text-white overflow-hidden">
+    <div class="absolute inset-0 opacity-10 bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_1px,_transparent_1px)] bg-[size:20px_20px]"></div>
+    <div class="relative z-10 text-center px-4 py-20">
+      <p class="text-sm md:text-base mb-4 opacity-90">新規事業への挑戦を目指す中小企業の設備投資を促進</p>
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">中小企業<br class="md:hidden">新事業進出補助金</h1>
+      <p class="text-lg md:text-xl">最大<span class="text-3xl md:text-5xl font-bold text-yellow-400">9,000</span>万円の補助金で<br>新たな事業展開をサポート</p>
+    </div>
+  </section>
+
+  <!-- 補助金概要 -->
+  <section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-center !mb-12">
+        <span class="block text-sm text-primary font-display tracking-wider mb-2">SUBSIDY OVERVIEW</span>
+        <span class="text-2xl md:text-3xl font-bold">補助金概要</span>
+      </h2>
+      <div class="flex flex-col md:flex-row justify-center gap-8">
+        <div class="bg-white border-3 border-primary rounded-2xl p-8 text-center shadow-[4px_4px_0_0_#F20505]">
+          <p class="text-gray-500 mb-2">補助率</p>
+          <p class="font-bold"><span class="text-4xl text-primary">1/2</span>〜<span class="text-4xl text-primary">2/3</span></p>
+        </div>
+        <div class="bg-white border-3 border-primary rounded-2xl p-8 text-center shadow-[4px_4px_0_0_#F20505]">
+          <p class="text-gray-500 mb-2">補助上限額</p>
+          <p class="font-bold">最大<span class="text-4xl text-primary">9,000</span>万円</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- プラン一覧 -->
+  <section class="py-20 px-4 bg-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-center !mb-12">
+        <span class="block text-sm text-primary font-display tracking-wider mb-2">PLAN</span>
+        <span class="text-2xl md:text-3xl font-bold">申請プラン</span>
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="relative bg-white border-2 border-gray-800 rounded-xl p-8 text-center hover:-translate-y-1 transition">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-sm px-4 py-1 rounded-full">人気</span>
+          <h3 class="text-lg font-bold mb-2">着手金割引プラン</h3>
+          <p class="text-sm text-gray-500">初期費用を抑えたい方におすすめ</p>
+        </div>
+        <div class="bg-white border-2 border-gray-800 rounded-xl p-8 text-center hover:-translate-y-1 transition">
+          <h3 class="text-lg font-bold mb-2">再チャレンジ割引</h3>
+          <p class="text-sm text-gray-500">過去に不採択だった方向け</p>
+        </div>
+        <div class="bg-white border-2 border-gray-800 rounded-xl p-8 text-center hover:-translate-y-1 transition">
+          <h3 class="text-lg font-bold mb-2">通常コース</h3>
+          <p class="text-sm text-gray-500">標準的なサポートプラン</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 補助金説明 -->
+  <section class="py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-center !mb-12">
+        <span class="block text-sm text-primary font-display tracking-wider mb-2">ABOUT</span>
+        <span class="text-2xl md:text-3xl font-bold">中小企業新事業進出補助金とは？</span>
+      </h2>
+      <div class="flex flex-col md:flex-row gap-8 items-center">
+        <div class="md:w-1/2">
+          <img src={`${themeUrl}/images/teamwork.webp`} alt="チームワーク" class="rounded-2xl" />
+        </div>
+        <div class="md:w-1/2 space-y-4 text-gray-700 leading-relaxed">
+          <p>中小企業新事業進出補助金は、中小企業の新たな事業展開を支援するための補助金制度です。</p>
+          <p>新規事業への参入、業態転換、事業再構築などを検討している中小企業が対象となり、設備投資や販路開拓にかかる経費の一部を補助します。</p>
+          <p>ポストコロナ時代の経済社会の変化に対応するため、中小企業の思い切った事業再構築を支援し、日本経済の構造転換を促すことを目的としています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 補助対象経費 -->
+  <section class="py-20 px-4 bg-gray-100">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-center !mb-12 ">
+        <span class="block text-sm text-primary font-display tracking-wider mb-2">TARGET EXPENSES</span>
+        <span class="text-2xl md:text-3xl font-bold">補助対象経費</span>
+      </h2>
+      <ul class="grid md:grid-cols-2 gap-4">
+        {['建物費', '機械装置・システム構築費', '技術導入費', '専門家経費', '運搬費', 'クラウドサービス利用費', '外注費', '知的財産権等関連経費', '広告宣伝・販売促進費', '研修費'].map((item) => (
+          <li class="flex items-center gap-3 bg-white p-4 rounded-lg border border-gray-200">
+            <img src={`${themeUrl}/images/check.svg`} alt="" class="w-6 h-6 shrink-0" />
+            <span class="font-medium">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- お悩み相談 -->
+  <section class="py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-center !mb-12">
+        <span class="block text-sm text-primary font-display tracking-wider mb-2">WORRIES</span>
+        <span class="text-2xl md:text-3xl font-bold">こんなお悩みありませんか？</span>
+      </h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        {[
+          { text: '新規事業を始めたいが、資金が足りない', img: 'onayami-1.png' },
+          { text: '補助金申請の手続きが複雑で分からない', img: 'onayami-2.png' },
+          { text: '事業計画書の書き方が分からない', img: 'onayami-3.png' },
+          { text: '採択率を上げる方法を知りたい', img: 'onayami-4.png' },
+          { text: '申請から採択までサポートしてほしい', img: 'onayami-5.png' },
+          { text: '他社の成功事例を参考にしたい', img: 'onayami-6.png' }
+        ].map((item) => (
+          <div class="flex items-center gap-4 bg-white border-2 border-primary rounded-lg p-4">
+            <img src={`${themeUrl}/images/${item.img}`} alt="" class="w-12 h-12 object-contain shrink-0" />
+            <p class="font-medium">{item.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 採択事例 -->
+  <section class="py-20 px-4 bg-gray-100">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-center !mb-12">
+        <span class="block text-sm text-primary font-display tracking-wider mb-2">CASE STUDIES</span>
+        <span class="text-2xl md:text-3xl font-bold">採択事例</span>
+      </h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white border-3 border-gray-800 rounded-2xl p-6 shadow-[4px_4px_0_0_#F20505]">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">1,000万円</span>
+            <span class="bg-gray-800 text-white px-3 py-1 rounded text-xs">飲食業</span>
+          </div>
+          <h3 class="font-bold mb-2">居酒屋からテイクアウト専門店への業態転換</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">コロナ禍で売上が激減した居酒屋が、テイクアウト専門店へ業態転換。新たな厨房設備の導入と店舗改装により、売上V字回復を達成。</p>
+        </div>
+        <div class="bg-white border-3 border-gray-800 rounded-2xl p-6 shadow-[4px_4px_0_0_#F20505]">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">2,000万円</span>
+            <span class="bg-gray-800 text-white px-3 py-1 rounded text-xs">製造業</span>
+          </div>
+          <h3 class="font-bold mb-2">金属加工業からEV部品製造への進出</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">従来の金属加工技術を活かし、EV（電気自動車）向け部品製造に参入。最新の加工機械を導入し、新規顧客の開拓に成功。</p>
+        </div>
+        <div class="bg-white border-3 border-gray-800 rounded-2xl p-6 shadow-[4px_4px_0_0_#F20505]">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">2,000万円</span>
+            <span class="bg-gray-800 text-white px-3 py-1 rounded text-xs">小売業</span>
+          </div>
+          <h3 class="font-bold mb-2">実店舗からECサイト運営への転換</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">地方の雑貨店がECサイトを新規構築。在庫管理システムの導入と物流体制の整備により、全国への販路拡大を実現。</p>
+        </div>
+        <div class="bg-white border-3 border-gray-800 rounded-2xl p-6 shadow-[4px_4px_0_0_#F20505]">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">4,000万円</span>
+            <span class="bg-gray-800 text-white px-3 py-1 rounded text-xs">建設業</span>
+          </div>
+          <h3 class="font-bold mb-2">建設業から再生可能エネルギー事業への参入</h3>
+          <p class="text-sm text-gray-600 leading-relaxed">建設業のノウハウを活かし、太陽光発電設備の設置事業に参入。専門機材の導入と人材育成により、新たな収益柱を確立。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SDGs支援メッセージ -->
+  <section class="py-20 px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="!mb-12">
+        <span class="block text-sm text-primary font-display tracking-wider mb-2">SDGs</span>
+        <span class="text-2xl md:text-3xl font-bold">持続可能な事業計画を支援</span>
+      </h2>
+      <div class="space-y-4 text-gray-700">
+        <p>補助金申請において、SDGs（持続可能な開発目標）への取り組みは重要な評価ポイントとなっています。</p>
+        <p>私たちは、環境・社会・経済の三側面から持続可能な事業計画の策定をサポートし、採択率向上に貢献します。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- サポートメリット -->
+  <section class="py-20 px-4 bg-primary">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-center !mb-12 text-white">
+        <span class="block text-sm font-display tracking-wider mb-2 opacity-90">MERIT</span>
+        <span class="text-2xl md:text-3xl font-bold">エクシードの3つの強み</span>
+      </h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-8 text-center">
+          <img src={`${themeUrl}/images/number01.svg`} alt="01" class="w-16 h-16 mx-auto !mb-4" />
+          <h3 class="text-lg font-bold !mb-2">高い採択率</h3>
+          <p class="text-sm text-gray-600">豊富な実績とノウハウにより、高い採択率を実現しています。</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 text-center">
+          <img src={`${themeUrl}/images/number02.svg`} alt="02" class="w-16 h-16 mx-auto !mb-4" />
+          <h3 class="text-lg font-bold !mb-2">ワンストップサポート</h3>
+          <p class="text-sm text-gray-600">申請から採択後のフォローまで、一貫してサポートいたします。</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 text-center">
+          <img src={`${themeUrl}/images/number03.svg`} alt="03" class="w-16 h-16 mx-auto !mb-4" />
+          <h3 class="text-lg font-bold !mb-2">専門家チーム</h3>
+          <p class="text-sm text-gray-600">中小企業診断士や税理士など、各分野の専門家がチームでサポートします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- サポートフロー -->
+  <section class="py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-center !mb-12">
+        <span class="block text-sm text-primary font-display tracking-wider mb-2">FLOW</span>
+        <span class="text-2xl md:text-3xl font-bold">サポートの流れ</span>
+      </h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {[
+          { step: '01', title: '無料相談・ヒアリング', desc: 'まずはお気軽にご相談ください。' },
+          { step: '02', title: '補助金診断', desc: '最適な補助金をご提案いたします。' },
+          { step: '03', title: '事業計画策定', desc: '採択率を高める事業計画書を作成。' },
+          { step: '04', title: '申請書類作成', desc: '必要書類を作成し、提出までサポート。' },
+          { step: '05', title: '採択・交付決定', desc: '採択後の交付申請もサポート。' },
+          { step: '06', title: '事業実施', desc: '計画に沿った事業実施をサポート。' },
+          { step: '07', title: '実績報告', desc: '実績報告書の作成をサポート。' },
+          { step: '08', title: '補助金受給', desc: '補助金の受給までしっかりサポート。' }
+        ].map((item) => (
+          <div class="bg-white border-2 border-gray-200 rounded-xl p-5">
+            <div class="text-primary font-display font-bold text-sm mb-2">STEP {item.step}</div>
+            <h3 class="font-bold mb-1 text-sm">{item.title}</h3>
+            <p class="text-xs text-gray-600">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 px-4 bg-gray-100">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-center !mb-12">
+        <span class="block text-sm text-primary font-display tracking-wider mb-2">FAQ</span>
+        <span class="text-2xl md:text-3xl font-bold">よくある質問</span>
+      </h2>
+      <div class="space-y-4">
+        {[
+          { q: '補助金の申請にはどのくらいの期間がかかりますか？', a: '申請準備から提出まで、通常1〜2ヶ月程度かかります。余裕を持ったスケジュールでご相談ください。' },
+          { q: '採択されなかった場合、費用はかかりますか？', a: '成功報酬型のプランもご用意しております。詳しくはお問い合わせください。' },
+          { q: 'どのような業種でも申請できますか？', a: '基本的に中小企業であれば業種を問わず申請可能です。ただし、一部対象外となる業種もありますので、詳しくはご相談ください。' },
+          { q: '申請書類は自分で作成する必要がありますか？', a: '弊社が申請書類の作成を全面的にサポートいたします。必要な情報をご提供いただければ、専門スタッフが作成いたします。' },
+          { q: '補助金はいつ受け取れますか？', a: '補助金は後払い方式となります。事業完了後、実績報告を行い、審査を経て補助金が支給されます。' },
+          { q: '相談は無料ですか？', a: '初回のご相談は無料です。お気軽にお問い合わせください。' }
+        ].map((item) => (
+          <details class="bg-white border border-gray-200 rounded-lg overflow-hidden group">
+            <summary class="p-5 cursor-pointer font-bold flex justify-between items-center">
+              {item.q}
+              <span class="text-primary text-2xl group-open:rotate-45 transition-transform">+</span>
+            </summary>
+            <p class="px-5 pb-5 text-gray-600 leading-relaxed">{item.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-4 bg-gradient-to-br from-gray-800 to-gray-900 text-white text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-2xl md:text-4xl font-bold !mb-4">まずは無料相談から</h2>
+      <p class="mb-8 opacity-90">補助金申請のプロがあなたの事業をサポートします。<br>お気軽にご相談ください。</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://exceed-japan.com/contact" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white font-bold px-10 py-4 rounded-full transition">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          お問い合わせ
+        </a>
+        <a href="http://lin.ee/vd1Uvb0" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-[#06C755] hover:bg-[#05b04c] text-white font-bold px-10 py-4 rounded-full transition">
+          <img src={`${themeUrl}/images/sns-icon-line.webp`} alt="LINE" width="24" height="24" class="rounded">
+          LINEで相談
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
