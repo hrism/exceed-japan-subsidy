@@ -1,0 +1,1097 @@
+@charset "utf-8";
+
+/* コンタクトページCSS　ここから-------------------------------------------- */
+
+.contact_wrap{
+	max-width:800px;
+	margin: 0 auto;
+	padding-top:100px;
+}
+
+.contact_title{
+	font-size:clamp(1.25rem, 0.943rem + 1.31vw, 2.5rem);
+	padding-bottom: 32px;
+	font-weight:bold;
+}
+
+.contact_title_txt{
+	font-size:clamp(0.875rem, 0.844rem + 0.13vw, 1rem);
+	line-height:2;
+	position:relative;
+	padding-bottom:91px;
+}
+
+.contact_title_txt::after{
+	position:absolute;
+	content:"";
+	background-image:url(../images/contact_img.webp);
+	background-repeat:no-repeat;
+	background-size:contain;
+	width:290px;
+    height: 180px;
+    bottom: 0;
+    right: 0;
+}
+
+.contact_body{
+	border: 5px solid #000;
+	box-shadow: 4px 4px 0 #F20505;
+	padding:66px 88px;
+	border-radius: 20px;
+}
+
+.form-label-name{
+	font-size:clamp(1rem, 0.969rem + 0.13vw, 1.125rem);
+	font-weight:bold;
+}
+
+.wpcf7-form p{
+	margin-bottom: 24px;
+}
+
+.wpcf7-form-control{
+	margin-top:8px;
+	padding: 8px 0 8px 24px;
+	border-radius: 5px;
+	border: 2px solid #C9C9C9;
+}
+
+.wpcf7-text,
+.wpcf7-email,
+.wpcf7-tel,
+.wpcf7-textarea{
+	width:100%;
+}
+
+.contact_content {
+  resize: none;
+}
+
+.submit-button{
+	padding: 21px 135px;
+	border-radius:50px;
+	border: 3px solid #000;
+	box-shadow: 0 2px 0 #F20505;
+	background-color:#fff;
+	font-size: clamp(1.125rem, 1.033rem + 0.39vw, 1.5rem);
+	display:block;
+	margin: 0 auto;
+	max-width:355px;
+	cursor:pointer;
+	color:#000;
+}
+
+.submit-button:hover{
+	background-color:#F20505;
+	color:#fff;
+}
+
+@media screen and (max-width:850px){
+	.contact_wrap{
+		padding-left:16px;
+		padding-right:16px;
+		padding-top: 48px;
+	}
+	.contact_title_txt::after{
+		    width: 185px;
+    height: 120px;
+    bottom: 0px;
+    right: 0;
+	}
+	.contact_title{
+		text-align:center;
+	}
+	
+	.contact_body{
+		padding:24px;
+	}
+	.contact_body h3{
+		font-size:1rem;
+	}
+	.submit-button{
+		max-width: 289px;
+		padding: 21px 116px;
+	}
+}
+
+/* コンタクトページCSS　ここまで-------------------------------------------- */
+
+/* 会社情報CSS　ここから　-------------------------------------------------- */
+
+.company_wrap{
+	max-width:1000px;
+	margin: 0 auto;
+	padding-top:88px;
+}
+
+.company-title,
+.access_title{
+	color: #000;
+	font-size: 2.5rem;
+	padding-left: 24px;
+	position: relative;
+}
+
+.company-title::before,
+.access_title::before{
+	content:"";
+	position:absolute;
+	background-color:#F20505;
+	width: 12px;
+	height: 48px;
+	left: 0;
+	top: 5px;
+}
+
+.company-title::after{
+	width: 260px;
+    height: 215px;
+}
+
+@media screen and (max-width:850px){
+	.company-title{
+		padding-bottom: 20px;
+		font-size: 1.5rem;
+}
+	.company-title::before,
+	.access_title::before{
+	width: 8px;
+	height: 25px;
+		left: 0px;
+        top: 4px;
+}
+}
+
+.access_title{
+	padding-bottom:64px;
+}
+
+.access_contents{
+	padding-top:126px;
+}
+
+.access_contents_flex{
+	max-width:1000px;
+	margin: 0 auto;
+	align-items:center;
+	flex-wrap:wrap;
+}
+
+.access_contents_adress{
+	font-size:clamp(1rem, 0.969rem + 0.13vw, 1.125rem);
+}
+
+.access_contents_adress-span{
+	font-size:clamp(0.875rem, 0.844rem + 0.13vw, 1rem);
+}
+
+.access_contents-adress-box{
+	padding:40px 0;
+}
+
+.access_contents-adress-1{
+	padding-bottom:32px;
+}
+
+.access_contents-adress-2 ul li{
+	padding-bottom:16px;
+}
+
+.company-message-box{
+	max-width:660px;
+}
+
+.company-message-box h2{
+	font-size:clamp(1.25rem, 1.066rem + 0.79vw, 2rem);
+}
+
+.company-message{
+	display:flex;
+	justify-content:space-between;
+	max-width:1000px;
+	margin: 0 auto;
+	gap: 36px;
+	border: 4px solid #000;
+	box-shadow: 4px 4px 0 #F20505;
+	padding: 48px;
+	border-radius: 30px;
+	flex-wrap: wrap;
+}
+
+.company-message-box-img{
+	max-width:186px;
+	width:100%;
+}
+
+.company-message-box p{
+	font-size:1.125rem;
+	margin-top:24px;
+	line-height: 1.6;
+	text-align:justify;
+}
+
+.company-message-box-img p{
+	font-size:1rem;
+	text-align:center;
+	padding-top:8px;
+}
+
+@media screen and (max-width:850px){
+	
+	.company_wrap{
+		width:100%;
+		max-width:380px;
+		margin: 0 auto;
+		padding-left:16px;
+		padding-right:16px;
+		padding-top: 40px;
+	}
+	.access_contents_flex iframe{
+		width:100%;
+	}
+	
+	.access_contents_flex{
+		justify-content: center;
+		gap: 24px;
+		max-width: 320px;
+	}
+	
+	.access_title{
+		font-size:1.5rem;
+		padding-bottom: 24px;
+	}
+	
+	.access_contents{
+		padding: 60px 16px;
+	}
+	
+	.company-list{
+		padding:0 16px;
+	}
+	
+	.company-title::after {
+    width: 115px;
+    height: 98px;
+}
+	.company-message{
+		border-radius:15px;
+		padding: 40px 16px;
+	}
+	
+	.company-cnt{
+		padding-top:108px;
+		padding-left:0;
+		padding-right:0;
+	}
+	
+	.company-message-box-img{
+	max-width:186px;
+		margin: 0 auto;
+	width:100%;
+}
+	
+	.company-message-box h2{
+		text-align:center;
+	}
+	
+	.company-message-box p{
+		line-height:2;
+		font-size:0.9rem;
+	}
+}
+
+/* 会社情報CSS　ここまで　-------------------------------------------------- */
+
+/* 補助金　ここから　-------------------------------------------------- */
+.subsidy-wrap{
+	max-width:1000px;
+	margin: 0 auto;
+	padding-top:32px;
+}
+
+.subsidy-wrap-flex{
+	display:flex;
+	justify-content: flex-start;
+	gap:40px;
+	padding-bottom:88px;
+	flex-wrap:wrap;
+}
+
+.subsidy-wrap-consultation_cnt_title{
+	color:#000;
+	text-align:center;
+}
+
+.subsidy-wrap-consultation_list_box{
+	width: calc(100% / 4 - 20px);
+}
+
+.subsidy-wrap-consultation_list_flex{
+	max-width: 1000px;
+}
+
+.subsidy-wrap-flex-onayami-span{
+	border:1px solid #000;
+	padding:3px;
+}
+
+.subsidy-wrap-flex-box{
+	padding-top:8px;
+	position:relative;
+}
+
+.subsidy-wrap-flex-box::after{
+	content:"";
+	position:absolute;
+	background-image:url(../images/arrow-subsidy.svg);
+	background-size:contain;
+	background-repeat:no-repeat;
+	width:80px;
+	height:37px;
+	right:0;
+	left:0;
+	margin:0 auto;
+	bottom:-40px;
+}
+
+.subsidy-wrap-flex-box-list{
+	padding-left:40px;
+	padding-top:16px;
+	position:relative;
+}
+
+.subsidy-wrap-flex-box-list::before{
+	content:"";
+	position: absolute;
+	background-image: url(../images/check.svg);
+	background-repeat:no-repeat;
+	background-size:contain;
+	width: 17px;
+    height: 20px;
+	left:0;
+}
+
+.subsidy-wrap-flex-box-list-1st{
+	padding-top:30px;
+}
+
+.subsidy-wrap-contents-title{
+	font-size:clamp(1.125rem, 0.941rem + 0.79vw, 1.875rem);
+	padding-bottom:16px;
+}
+
+.subsidy-wrap-contents-subtitle{
+	font-size:clamp(1rem, 0.877rem + 0.52vw, 1.5rem);
+	padding-bottom:20px;
+}
+
+.subsidy-wrap-contents-txt{
+	font-size:clamp(0.875rem, 0.814rem + 0.26vw, 1.125rem);
+	padding-bottom:20px;
+}
+
+.subsidy-wrap-contents-boxkinds{
+	border:3px solid #000;
+	border-radius:5px;
+	padding: 34px 40px 40px 40px;
+	box-shadow:2px 3px 0 #F20505;
+}
+
+.subsidy-wrap-contents-boxkinds li{
+	border-bottom: 1px solid #A1A1A1;
+}
+
+.subsidy-wrap-contents-boxkinds_flex{
+	display:flex;
+	justify-content:flex-start;
+	padding-bottom:16px;
+	padding-top:16px;
+	flex-wrap: wrap;
+}
+
+.subsidy-wrap-contents-boxkinds_flex-title{
+	max-width:126px;
+	width:100%;
+	color: #F20505;
+	font-weight:bold;
+}
+
+.subsidy-wrap-contents-boxkinds_flex li{
+	border-bottom:none;
+}
+
+.subsidy-wrap-contents-box-01,
+.subsidy-wrap-contents-box-02,
+.subsidy-wrap-contents-box-03,
+.subsidy-wrap-contents-box-04{
+	padding-top:97px;
+}
+.subsidy-wrap-contents-box-01-title,
+.subsidy-wrap-contents-box-02-title,
+.subsidy-wrap-contents-box-03-title,
+.subsidy-wrap-contents-box-04-title{
+	color:#F20505;
+	font-size:clamp(1.125rem, 1.033rem + 0.39vw, 1.5rem);
+	padding-left:76px;
+	font-weight:bold;
+	position:relative;
+}
+
+.subsidy-wrap-contents-box-01-title::before,
+.subsidy-wrap-contents-box-02-title::before,
+.subsidy-wrap-contents-box-03-title::before,
+.subsidy-wrap-contents-box-04-title::before{
+	content:"";
+	position:absolute;
+	background-image:url(../images/number01.svg);
+	background-repeat:no-repeat;
+	background-size:contain;
+	width:64px;
+	height:40px;
+	left:0;
+	bottom:0;
+}
+.subsidy-wrap-contents-box-02-title::before{
+	background-image:url(../images/number02.svg);
+}
+
+.subsidy-wrap-contents-box-03-title::before{
+	background-image:url(../images/number03.svg);
+}
+
+.subsidy-wrap-contents-box-04-title::before{
+	background-image:url(../images/number04.svg);
+	bottom: 26px
+}
+
+.subsidy-wrap-contents-box-01-box-title,
+.subsidy-wrap-contents-box-02-box-title,
+.subsidy-wrap-contents-box-03-box-title,
+.subsidy-wrap-contents-box-04-box-title{
+	padding:16px 0;
+}
+
+.subsidy-wrap-contents-box-04-title{
+	padding-bottom:28px;
+}
+
+.subsidy-wrap-contents-box-01-box,
+.subsidy-wrap-contents-box-03-box,
+.subsidy-wrap-contents-box-04-box{
+	padding:32px 32px 16px 24px;
+	border:3px solid #000;
+	border-radius:5px;
+}
+
+.subsidy-wrap-contents-box-01-box li,
+.subsidy-wrap-contents-box-03-box li{
+	padding-left:24px;
+	padding-bottom:24px;
+	position:relative;
+}
+
+.subsidy-wrap-contents-box-04-box div ol li{
+padding-bottom:16px;	
+}
+
+.subsidy-wrap-contents-box-03-box p{
+	padding-bottom:16px;
+}
+
+.subsidy-wrap-contents-box-01-box li span,
+.subsidy-wrap-contents-box-03-box li span{
+	position:absolute;
+	background-color:#F20505;
+	width:15px;
+	height:15px;
+	border-radius:50px;
+	left:0;
+	top:4px;
+}
+
+.subsidy-wrap-contents-box-01-p1,
+.subsidy-wrap-contents-box-01-p2{
+	padding-top:24px;
+	font-size:clamp(0.875rem, 0.844rem + 0.13vw, 1rem);
+}
+
+.subsidy-wrap-contents-box-01-p1 span,
+.subsidy-wrap-contents-box-01-p2 span{
+	background: linear-gradient(transparent 50%, #FFBDC9 50%);
+}
+
+.subsidy-wrap-contents-boxkinds li:last-child{
+	border-bottom:none;
+}
+
+.consultation_list{
+	margin-bottom:40px;
+}
+
+.subsidy-wrap-contents-title_manufacturing-subsidy-title{
+	font-size:clamp(1rem, 0.939rem + 0.26vw, 1.25rem);
+}
+
+.m_page_gyoumukaizen_table{
+	margin-top: 30px;
+	overflow-x: scroll;
+}
+
+.m_page_gyoumukaizen_table-inner{
+	width: 860px;
+    border-collapse: collapse;
+    border: 1px solid #000;
+}
+
+.m_page_gyoumukaizen_table-tr{
+	background: #fff;
+}
+
+.m_page_gyoumukaizen_table-td{
+	padding: 10px 20px;
+    font-weight: 500;
+    border: 1px solid #000;
+}
+
+.m_page_gyoumukaizen_table-td:first-child {
+    width: 397px;
+    padding: 10px 30px;
+}
+
+.m_page_gyoumukaizen_table-tr:first-child>.m_page_gyoumukaizen_table-td{
+	background: #DE4444;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.m_page_gyoumukaizen_table-tr:first-child>.m_page_gyoumukaizen_table-td:first-child {
+    width: 397px !important;
+}
+
+.m_page_gyoumukaizen_table-tr:first-child>.m_page_gyoumukaizen_table-td:not(:first-child) {
+    width: 170px;
+}
+
+.m_page_gyoumukaizen_table-tr:not(:first-child)>.m_page_gyoumukaizen_table-td:first-child {
+    width: 130px;
+    text-align: center;
+}
+
+.m_page_gyoumukaizen_table-price-inner {
+    width: 635px;
+    border-collapse: collapse;
+    border: 1px solid #000;
+}
+
+.m_page_gyoumukaizen_table-price-tr:first-child {
+    background: #DE4444;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.m_page_gyoumukaizen_table-price-td {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    font-weight: 500;
+}
+
+.m_page_gyoumukaizen_table-price-td:first-child {
+    width: 220px;
+}
+
+.m_page_gyoumukaizen_table-price-td:not(:first-child) {
+    width: 415px;
+}
+
+.m_page_gyoumukaizen_table-price-tr {
+    background: #fff;
+}
+
+.m_page_gyoumukaizen_table-price-td {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    font-weight: 500;
+}
+
+.m_page_gyoumukaizen_table-price-td:first-child {
+    width: 220px;
+}
+
+.m_page_gyoumukaizen_table-price-td:not(:first-child) {
+    width: 415px;
+}
+
+.m_page_gyoumukaizen_table-price-tr {
+    background: #fff;
+}
+
+.m_page_gyoumukaizen_table-price-td {
+    padding: 10px 20px;
+    border: 1px solid #000;
+    font-weight: 500;
+}
+
+.m_page_gyoumukaizen_table-price-td:first-child {
+    width: 220px;
+}
+
+.m_page_gyoumukaizen_table-price-td:not(:first-child) {
+    width: 415px;
+}
+
+.m_page_gyoumukaizen_table-price {
+    margin-top: 30px;
+    overflow-x: scroll;
+}
+
+.m_page_gyoumukaizen_table-limit-inner {
+    width: 800px;
+    border-collapse: collapse;
+    border: 1px solid #000;
+}
+
+.m_page_gyoumukaizen_table-limit-td {
+    padding: 5px 10px;
+    font-weight: 500;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+.m_page_gyoumukaizen_table-limit-td__common {
+    width: 145px;
+    background: #DE4444;
+    color: #fff;
+}
+
+.m_page_gyoumukaizen_table-limit-tr__bg-primary>.m_page_gyoumukaizen_table-limit-td {
+    font-weight: 700;
+}
+
+.m_page_gyoumukaizen_table-limit-td {
+    padding: 5px 10px;
+    font-weight: 500;
+    border: 1px solid #000;
+}
+
+.m_page_gyoumukaizen_table-limit-tr:not(:first-child)>.m_page_gyoumukaizen_table-limit-td {
+    background: #fff;
+}
+
+.m_page_gyoumukaizen_table-limit {
+    margin-top: 30px;
+    overflow-x: scroll;
+}
+
+.m_page_gyoumukaizen_table-limit-td__other {
+    background: #DE4444 !important;
+    color: #fff;
+}
+
+.m_page_gyoumukaizen_table-limit-tr__bg-primary>.m_page_gyoumukaizen_table-limit-td {
+    font-weight: 700;
+}
+
+@media screen and (min-width: 1080px) {
+    .m_page_gyoumukaizen_table-limit,
+	.m_page_gyoumukaizen_table-price,
+	.m_page_gyoumukaizen_table{
+        overflow-x: unset;
+    }
+}
+
+@media screen and (max-width:850px){
+	.subsidy-wrap-flex{
+		justify-content:center;
+		padding-left:16px;
+		padding-right:16px;
+	}
+	
+	.subsidy-wrap-flex-box::after{
+		bottom:-60px;
+	}
+	
+	.subsidy-wrap-contents{
+		padding-left:16px;
+		padding-right:16px;
+	}
+	
+	.subsidy-wrap-contents-box-01-title::before,
+	.subsidy-wrap-contents-box-02-title::before,
+	.subsidy-wrap-contents-box-03-title::before,
+	.subsidy-wrap-contents-box-04-title::before{
+		width:40px;
+		top: 0;
+	}
+	.subsidy-wrap-contents-box-01-title::before{
+		bottom: -12px;
+	}
+	
+	.subsidy-wrap-contents-box-01-title,
+	.subsidy-wrap-contents-box-02-title,
+	.subsidy-wrap-contents-box-03-title,
+	.subsidy-wrap-contents-box-04-title{
+		padding-left:50px;
+	}
+	
+	.subsidy-wrap-contents-box-01,
+	.subsidy-wrap-contents-box-02,
+	.subsidy-wrap-contents-box-03,
+	.subsidy-wrap-contents-box-04{
+    padding-top: 58px;
+}
+	
+	.subsidy-wrap-contents-box-04{
+	padding-bottom:16px;	
+	}
+	.subsidy-wrap-consultation_list_box{
+		width:100%;
+	}
+	
+	.subsidy-wrap-consultation_cnt_title{
+		padding-top:24px;
+	}
+	.subsidy-wrap-flex-box{
+	padding-left:16px;
+		padding-right:16px;
+	}
+	.subsidy-wrap-flex-box-list{
+		padding-left:35px;
+	}
+	.subsidy-wrap-flex-box-list::before{
+	width: 18px;
+    height: 23px;
+    bottom: 19px;
+	}
+	.subsidy-wrap-contents-boxkinds{
+		padding: 34px 24px 40px 24px;
+	}
+	
+	.subsidy-wrap-contents-box-01-title-before::before{
+		bottom:0;
+	}
+}
+
+/* 採用情報 */
+.recruit-wrap{
+	max-width:1000px;
+	margin:0 auto;
+	padding-top:71px;
+	background-color:#fff;
+}
+
+.recruit-title{
+	font-size:clamp(1.25rem, 1.066rem + 0.79vw, 2rem);
+	padding-bottom:40px;
+}
+
+.recruit_content{
+	margin-top:88px;
+	padding:80px 80px;
+	border:7px solid #000;
+	border-radius:25px;
+}
+
+.recruit_flow{
+	padding:70px 0 30px;
+}
+
+.recruit_flow ol{
+	position:relative;
+}
+
+.recruit_flow ol::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  bottom: 0;
+	left: 9%; /* 線の位置を調整 */
+  width: 0; /* 横幅は不要 */
+	border-left: 2px dashed #706a6a; /* ダッシュの縦線を設定 */
+  transform: translateX(-50%); /* 線を中央に配置 */
+}
+
+.recruit_flow_title,
+.recruit_content_title{
+	font-size:clamp(1.2rem, 0.877rem + 0.52vw, 1.5rem);
+	padding-bottom:40px;
+	padding-left:40px;
+	position:relative;
+}
+
+.recruit_flow_title::before,
+.recruit_content_title::before{
+	content:"";
+	position:absolute;
+	background-color:#F20505;
+	width:10px;
+	height:32px;
+	left:0;
+}
+
+.recruit_entrybtn{
+	max-width:270px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+.recruit_entrybtn::after{
+	content:"";
+	position:absolute;
+	background-image:url(../images/recruit_arrow.svg);
+	background-size:contain;
+	background-repeat:no-repeat;
+	width:67px;
+	height:8px;
+    top: 12px;
+    right: 6%
+}
+
+.recruit_entrybtn a{
+	padding:16px 100px;
+	background-color:#F20505;
+	border:3px solid #000;
+	color:#fff;
+	border-radius:50px;
+	font-size:clamp(1rem, 0.877rem + 0.52vw, 1.5rem);
+	letter-spacing:1.6;
+}
+
+.recruit_entrybtn a:hover{
+	background-color:#fff;
+	color:#F20505;
+}
+
+.recruit_entrybtn:hover::after{
+	background-image:url(../images/recruit_arrow-000.svg);
+}
+
+.recruit_flow_flex{
+	display:flex;
+	justify-content: flex-start;
+	max-width: 1000px;
+	padding-left:200px;
+	padding-right:0;
+	gap:56px;
+	margin-bottom:40px;
+	align-items:center;
+	flex-wrap:wrap;
+}
+
+.recruit_flow_flex_title{
+	width:100%;
+	text-align:center;
+	max-width:102px;
+	font-size:clamp(1rem, 0.877rem + 0.52vw, 1.5rem);
+	position:relative;
+}
+
+.recruit_flow_flex_title::before{
+	position:absolute;
+	content:"";
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-image:url(../images/step1.svg);
+	width:122px;
+	height:47px;
+	top: -5px;
+	left: -186px;
+}
+
+.recruit_flow_flex_title-02::before{
+	background-image:url(../images/step2.svg);
+}
+
+.recruit_flow_flex_title-03::before{
+	background-image:url(../images/step3.svg);
+}
+
+.recruit_flow_flex_title-04::before{
+	background-image:url(../images/join.svg);
+}
+
+.recruit_flow_flex_txt{
+	font-size:clamp(0.875rem, 0.814rem + 0.26vw, 1.125rem);
+}
+
+/* 	採用ページ　アコーディオン */
+
+.accordion {
+  width: 100%;
+}
+
+.accordion-item {
+  border-bottom: 3px solid #e9c9c9;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.accordion-header {
+  background-color: #ffeaea;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header:hover {
+  background-color: #ffeaea;
+}
+
+.accordion-header span {
+  font-weight: bold;
+	font-size:clamp(0.875rem, 0.844rem + 0.13vw, 1rem);
+}
+
+.accordion-header .toggle-icon {
+  font-size: 1.2em;
+}
+.accordion-content {
+  max-height: 0; /* 初期状態で非表示 */
+  overflow: hidden; /* 内容が溢れないようにする */
+  transition: max-height 0.3s ease, padding 0.3s ease; /* 高さと余白をスムーズに */
+  padding: 0 15px; /* 初期状態では上下のpaddingを0に */
+  box-sizing: border-box; /* 正確な計算のために必要 */
+}
+
+.accordion-item.active .accordion-content {
+  /* これを使用することで動的にJavaScriptで設定 */
+}
+
+.accordion-content p {
+  margin: 0;
+}
+
+.active .accordion-content {
+  display: block;
+}
+
+.active .accordion-header .toggle-icon::before {
+  content: "－";
+}
+
+.accordion-header .toggle-icon::before {
+  content: "＋";
+}
+
+/* backgroud */
+.recruit_bgimg {
+  position: relative;
+  overflow: hidden; /* 背景要素内で円を制限 */
+	background-color: #fff;
+}
+
+.recruit_bgimg .circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3); /* 半透明の白 */
+  animation: float 5s ease-in-out infinite, move 10s linear infinite;
+}
+
+.recruit_bgimg .recruit-wrap {
+  position: relative;
+  z-index: 2; /* 円より上に配置 */
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media screen and (max-width:850px){
+	.recruit_content {
+    margin-top: 48px;
+		padding: 40px 16px 64px;
+    border: 4px solid #000;
+    border-radius: 15px;
+}
+	
+	.recruit_flow_title::before,
+	.recruit_content_title::before{
+		height:24px;
+	}
+	
+	.recruit_flow_title,
+	.recruit_content_title{
+		padding-bottom: 24px;
+	}
+	
+	.recruit_flow{
+		padding: 48px 0 16px;
+	}
+	
+	.recruit_flow_flex{
+		padding-left:16px;
+		gap:16px;
+		max-width: 318px;
+		margin: 0 auto 32px;
+	}
+	
+	.recruit_flow_flex_title::before{
+	width: 90px;
+    height: 38px;
+    top: -5px;
+    left: -92px;
+	}
+	
+	.recruit_flow ol::before{
+		left:14%;
+		border-left:none; 
+	}
+	
+	.recruit_flow_flex{
+		justify-content:center;
+	}
+	
+	.recruit_entrybtn{
+		max-width:265px;
+	}
+	
+	.recruit_entrybtn::after{
+		top:8px;
+	}
+	
+	.recruit_bgimg{
+		padding-left:16px;
+		padding-right:16px;
+	}
+	
+	.recruit_content-entry{
+		padding: 40px 16px 40px;
+		text-align:center;
+	}
+	
+	.recruit-wrap-entry{
+		padding-top:8px;
+	}
+
+}
+
+/* カテゴリ */
+.post-contents-title-category{
+	font-size:clamp(1.25rem, 1.189rem + 0.26vw, 1.5rem);
+	text-align:center;
+	padding:24px;
+}
+
+@media screen and (max-width:850px){
+	.post-case-item-flex{
+		flex-wrap:wrap;
+	}
+	
+	.archive-btn{
+		text-align:center;
+	}
+	
+	.archive-post-flex{
+		padding-left:16px;
+		padding-right:16px;
+	}
+}

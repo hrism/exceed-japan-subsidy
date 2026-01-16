@@ -1,0 +1,1049 @@
+@charset "utf-8";
+/* clamp 1940px min 375px */
+
+/* アンダーライン ============*/
+
+.under-line_yellow{
+  background: linear-gradient(transparent 50%, #F9F984 50%);
+}
+
+.under-line_blue{
+  background: linear-gradient(transparent 50%, #B6E3F6 50%);
+}
+
+/* 背景調整 */
+
+.manufacturing .manufacturing-section-wrap{
+	position:relative;
+	z-index:2;
+}
+
+/* カルーセル部分調整 */
+
+.manufacturing .slick-slide{
+	height:336px;
+}
+
+.manufacturing .carousel-item-box{
+	max-height: 320px;
+    min-height: 320px;
+	background-color: #fff;
+}
+
+.manufacturing .slick-prev:before {
+    top: 40px;
+}
+
+.manufacturing .section-manufacturing-carousel{
+	padding-top:80px;
+}
+
+.manufacturing .section-manufacturing-carousel h2{
+ text-align:center;	
+	font-size: clamp(1.25rem, 0.8rem + 1.92vw, 2rem);
+}
+
+.manufacturing .case-cnt {
+    padding-top: 50px;
+}
+
+.manufacturing .case-cnt-bgimg::after {
+	display:none;
+}
+
+.manufacturing .post-category{
+	font-size:18px;
+}
+
+@media screen and (max-width:850px){
+	
+	.manufacturing .slick-slide{
+	height:418px;
+}
+	
+	.manufacturing .case-cnt {
+		padding-top:14px;
+	}
+	.manufacturing .carousel-item-box {
+    max-height: 415px;
+    min-height: 415px;
+}
+	.manufacturing .slick-prev:before {
+    top: -5px;
+}
+.recruit_bgimg {
+	padding-left: 0;
+	padding-right: 0;
+	}
+}
+
+
+/* FV調整 */
+
+.manufacturing h1{
+	width:100%;
+	padding-top: 90px;
+}
+
+.manufacturing picture img{
+	    width: 2560px;
+}
+
+/* 製造業業界事例============== */
+
+.section-manufacturingcese{
+  padding: 64px 88px;
+  border: 3px solid #000;
+  border-radius: 15px;
+  max-width: 1000px;
+  margin: 80px auto;
+  position: relative;
+	background-color: #fff;
+}
+
+.section-manufacturingcese::before{
+  content: "";
+  position: absolute;
+  background-image: url(../../images/case/manufacturing/section1-before.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 214px;
+  height: 170px;
+  right: 48px;
+  top: -23px;
+}
+
+.section-manufacturingcese h2{
+  font-size: clamp(1.625rem, 1.1rem + 2.24vw, 2.5rem);
+  /* fontsize 40px-26px */
+}
+
+.section-manufacturingcese h2 span.sec1-3point{
+  position: relative;
+}
+
+.section-manufacturingcese h2 span.sec1-3point::before{
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../../images/case/manufacturing/section1-title-before.svg);
+  width: 88px;
+  height: 8px;
+  left: 16px;
+  top: -8px;
+}
+
+.section-manufacturingcese h2 span.section-manufacturingcese_low{
+  font-size: clamp(1.25rem, 0.8rem + 1.92vw, 2rem);
+  /* fontsize 32px-20px */
+}
+
+.section-manufacturingcese_list{
+  max-width: 260px;
+}
+
+.section-manufacturingcese_flex{
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 56px;
+  padding-top: 40px;
+  padding-bottom: 8px;
+}
+
+.section-manufacturingcese_list-img{
+  max-width: 88px;
+  margin: 0 auto;
+  padding-top: 16px;
+}
+.section-manufacturingcese_list:nth-child(2) .section-manufacturingcese_list-title,
+.section-manufacturingcese_list:nth-child(3) .section-manufacturingcese_list-title{
+  padding: 17px 0 18px;
+}
+
+.section-manufacturingcese_list-title{
+  color: #05ABF2;
+  text-align: center;
+  font-weight: bold;
+  font-size: clamp(1.125rem, 0.9rem + 0.96vw, 1.5rem);
+  /* fontsize 24px-18px */
+}
+
+.section-manufacturingcese_list-txtbox{
+  text-align: center;
+  padding-top: 16px;
+}
+
+.section-manufacturingcese_list-txt1{
+  padding-bottom: 32px;
+  color: #6C6C6C;
+  font-weight: bold;
+  font-size: clamp(0.875rem, 0.725rem + 0.64vw, 1.125rem);
+  /* fontsize18px-14px */
+}
+
+.section-manufacturingcese_list-txt2{
+  font-weight: bold;
+  font-size: clamp(1.125rem, 0.9rem + 0.96vw, 1.5rem);
+  /* font-size 24px-18px */
+  position: relative;
+}
+
+.section-manufacturingcese_list-txt2::before{
+  content: "";
+  position: absolute;
+  width:0;
+height:0;
+border-style:solid;
+border-width: 19.1px 11px 0 11px;
+border-color: #6C6C6C transparent transparent transparent;
+left: 0 ;
+right: 0;
+margin: 0 auto;
+top: -16px;
+}
+
+.section-manufacturingcese_list-txt2-high{
+  font-weight: bold;
+  font-size: clamp(1.75rem, 1.3rem + 1.92vw, 2.5rem);
+  /* fontsize 40px-28px */
+}
+
+@media screen and (max-width:850px) {
+  .section-manufacturingcese::before {
+    width: 150px;
+    height: 110px;
+    right: 18px;
+    top: -16px;
+}
+
+.section-manufacturingcese{
+  padding: 64px 24px 24px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.section-manufacturingcese_flex{
+  padding-top: 8px;
+  display: block;
+}
+
+.section-manufacturingcese h2 span.sec1-3point::before {
+  width: 62px;
+  left: 7px;
+}
+
+.section-manufacturingcese_list{
+  max-width: 350px;
+}
+
+.section-manufacturingcese_listflex-sp{
+  display: flex;
+  justify-content: start;
+  gap: 16px;
+  align-items: center;
+  padding-top: 24px;
+  max-width: 230px;
+  margin: 0 auto;
+}
+
+.section-manufacturingcese_list-img{
+  max-width: 50px;
+  padding-top: 0;
+  margin: 0;
+}
+
+.section-manufacturingcese_list-txtbox{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.section-manufacturingcese_list-txt1{
+  padding-bottom: 0;
+}
+
+.section-manufacturingcese_list-txt2{
+  padding-bottom: 10px;
+}
+
+.section-manufacturingcese_list-txt2::before{
+  right: 100%;
+  left: -18px;
+  margin: 0;
+  top: 18px;
+  border-width: 14px 8px 0 8px;
+  transform: rotate(-90deg); /* 90度回転 */
+  transform-origin: center; /* 回転の基点を中心に設定 */
+}
+
+.section-manufacturingcese_list-title{
+  text-align: left;
+}
+
+}
+
+/* form ====================*/
+
+.section-form{
+	max-width: 900px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.section-form h2{
+  text-align: center;
+  font-size: clamp(1.5rem, 1.38rem + 0.51vw, 2rem);
+  /* fontsize 32px-24px */
+  padding-bottom: 24px;
+  position: relative;
+}
+.section-form h2::before{
+	content: "";
+	position: absolute;
+  background-image: url(../../images/case/manufacturing/form-before.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 160px;
+  height: 160px;
+  left: 19px;
+	z-index:4;
+}
+
+.section-form h2 span{
+  font-size: clamp(1.125rem, 0.975rem + 0.64vw, 1.75rem);
+  /* fontsize 28px-18px */
+}
+
+.section-form-cont{
+  border: 3px solid #000;
+  border-radius: 15px;
+  padding: 68px 42px;
+	background-color: #fff;
+}
+
+.section-form-cont-title{
+  text-align: center;
+  font-weight: bold;
+  font-size: clamp(1.125rem, 1.035rem + 0.38vw, 1.5rem);
+  /* fontsize 24px-18px */
+  padding-bottom: 24px;
+	padding-top:24px;
+}
+
+.section-form-btn-flex{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+	max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-form-btn{
+	max-width: 392px;
+  width: 100%;
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 24px 32px;
+  box-shadow: 2px 2px 0 #05ABF2;
+}
+
+.section-form-btn:hover{
+  background-color: #e6f8ff;
+}
+
+.section-form-btn img{
+  display: block;
+  margin: 0 auto;
+  max-width: 240px;
+}
+
+.section-form-btn a span{
+  display: block;
+  text-align: center;
+  padding-top: 16px;
+  font-size: clamp(0.875rem, 0.815rem + 0.26vw, 1.125rem);
+  /* fontsize 16px-14px */
+  white-space: pre-line;
+}
+
+@media screen and (max-width:850px) {
+  .section-form-cont {
+  padding: 32px 16px;
+}
+
+.section-form-btn{
+  padding: 12px;
+}
+	
+.section-form-btn:nth-child(2){
+	padding: 20px 12px;
+}
+
+
+.section-form-btn-flex{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+	margin: 0 14px;
+}
+
+.section-form-btn:nth-child(1){
+  padding: 20px 12px 12px;
+}
+
+.section-form h2::before {
+  width: 76px;
+  height: 76px;
+  left: 0px;
+  top: -48px;
+}
+
+.section-form-btn img {
+  max-width: 120px;
+}
+}
+
+
+/* コンバージョン　========== */
+
+.section-cva{
+  max-width: 744px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 0 auto;
+}
+
+.section-cva a img {
+  transition: transform 0.3s ease; /* スムーズなズーム効果 */
+}
+
+.section-cva a:hover img {
+  transform: scale(1.1); /* カーソルが当たると1.1倍に拡大 */
+}
+
+.section-cva h2{
+  text-align: center;
+  font-size: clamp(1rem, 0.88rem + 0.51vw, 1.5rem);
+  position: relative;
+}
+
+.section-cva h2::before,
+.section-cva h2::after{
+  content: "";
+  position: absolute;
+  background-image: url(../../images/case/cva-before.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 68px;
+  height: 52px;
+  left: 0;
+  top: 0px;
+}
+
+.section-cva h2::after{
+  left: auto;
+  right: 0;
+  margin: 0 auto;
+  transform: scaleX(-1);
+}
+
+.section-cva h2 span{
+  font-size: clamp(1.375rem, 1.255rem + 0.51vw, 1.875rem);
+}
+
+.section-cva-flex{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+  padding-top: 24px;
+}
+
+.section-cva-btn-line,
+.section-cva-btn-form{
+  cursor: pointer;
+}
+
+@media screen and (max-width:850px){
+  .section-cva{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .section-cva h2::before,
+  .section-cva h2::after{
+    width: 40px;
+    height: 32px;
+    top: 24px;
+}
+	.section-cva-flex{
+		justify-content: center;
+	}
+	
+	.section-cva a:hover img {
+  transform: scale(1.0); /* カーソルが当たると1.1倍に拡大 */
+}
+}
+
+/* ポイント　================ */
+
+.section-recommend-point{
+  max-width: 1000px;
+  margin: 120px auto 0;
+border: 3px solid #05ABF2;
+border-radius: 15px;
+padding: 83px 40px 30px;
+position: relative;
+	background-color: #F7FDFF;
+}
+
+.section-recommend-point::before{
+  content: "";
+  position: absolute;
+  background-image: url(../../images/case/manufacturing/point-before.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 240px;
+  height: 73px;
+  right: 40px;
+  top: -40px;
+}
+
+.section-recommend-point_flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 26px;
+	max-width: 906px;
+  margin: 0 auto;
+  align-items: end;
+}
+
+.section-recommend-point_list{
+  margin-bottom: 72px;
+}
+
+.section-recommend-txtbox{
+	max-width: 540px;
+}
+
+.section-recommend-point_list:nth-child(2) .section-recommend-point_flex{
+  flex-direction: row-reverse;
+}
+
+.section-recommend-txtbox-title{
+  font-size: clamp(1.375rem, 1.255rem + 0.51vw, 1.875rem);
+  font-weight: bold;
+  color: #05ABF2;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.section-recommend-txtbox-title::before{
+  content: "";
+  position: absolute;
+  background-image: url(../../images/case/manufacturing/point-before-1.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 64px;
+  height: 40px;
+  top: -56px;
+}
+
+.section-recommend-point_list:nth-child(2) .section-recommend-txtbox-title::before{
+  background-image: url(../../images/case/manufacturing/point-before-2.webp);
+}
+
+.section-recommend-point_list:nth-child(3) .section-recommend-txtbox-title::before{
+  background-image: url(../../images/case/manufacturing/point-before-3.webp);
+}
+
+.section-recommend-txtbox-txt{
+  font-size: clamp(0.875rem, 0.815rem + 0.26vw, 1.125rem) ;
+  text-align: justify;
+}
+
+@media screen and (max-width:850px) {
+  .section-recommend-point{
+    padding: 56px 32px 8px;
+    margin-left: 16px;
+    margin-right: 16px;
+	margin-top:72px;
+  }
+
+  .section-recommend-point::before{
+    width: 200px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .section-recommend-txtbox-title{
+    padding-top: 32px;
+  }
+
+  .section-recommend-txtbox-title::before{
+    width: 32px;
+    height: 32px;
+    top: 3px;
+  }
+}
+
+
+/* おすすめ　================ */
+
+.section-recommend{
+  max-width: 880px;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.section-recommend_title{
+  text-align: center;
+  padding-bottom: 35px;
+	font-size: clamp(1.25rem, 0.8rem + 1.92vw, 2rem);
+}
+
+.section-recommend_flex{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.section-recommend_cont{
+  max-width: 428px;
+  width: 100%;
+  background-color: #B6E3F6;
+  box-shadow: 4px 4px 0 #1B6096;
+  padding: 40px 20px;
+}
+
+.section-recommend_cont_box{
+  min-width: 360px;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.section-recommend_cont-title{
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 8px 32px 8px 52px;
+  font-size: clamp(1.063rem, 0.988rem + 0.32vw, 1.375rem);
+  /* fontsize:22px-17px */
+  font-weight: bold;
+  border: 2px solid #000;
+}
+
+.section-recommend_cont-title span{
+  position: relative;
+}
+
+.section-recommend_cont-title span:nth-child(1)::before{
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #05ABF2;
+  left: -28px;
+  top: 6px;
+}
+
+.section-recommend_cont:nth-child(3) .section-recommend_cont-title{
+  line-height: 1.3;
+  padding: 12px 32px 12px 52px;
+}
+
+.section-recommend_cont:nth-child(3) .section-recommend_cont-title span:nth-child(1)::before{
+  top: 16px;
+}
+
+.section-recommend_cont:nth-child(4) .section-recommend_cont_box .section-recommend_cont-title{
+  margin-top: 8px;
+}
+
+.section-recommend_cont-title_sub{
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.section-recommend_cont-why{
+  font-size: 14px;
+  position: relative;
+}
+
+.section-recommend_cont-why{
+  font-size: 14px;
+  padding-top: 24px;
+  padding-left: 52px;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.section-recommend_cont-why::before{
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 30px;
+  height: 1px;
+  left: 17px;
+  top: 34px;
+}
+
+.section-recommend_cont-txt{
+  padding-left: 14px;
+  font-size: clamp(0.875rem, 0.845rem + 0.13vw, 1rem);
+  font-weight: normal;
+	text-align:justify;
+}
+
+@media screen and (max-width:850px){
+
+  .section-recommend {
+    padding-bottom: 40px;
+}
+
+  .section-recommend_cont{
+    max-width: 330px;
+    padding: 20px;
+  }
+
+  .section-recommend_cont_box{
+    min-width: 280px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .section-recommend_cont-title {
+    padding: 8px 16px 8px 40px;
+}
+
+.section-recommend_cont-title span:nth-child(1)::before{
+  top: 7px;
+  width: 10px;
+  height: 10px;
+  left: -22px;
+}
+
+.section-recommend_cont:nth-child(3) .section-recommend_cont-title span:nth-child(1)::before {
+  top: 14px;
+}
+
+.section-recommend_cont:nth-child(3) .section-recommend_cont-title {
+  padding: 12px 0 12px 40px;
+}
+}
+
+
+/* よくある質問　============ */
+
+.section-faq_title{
+  text-align: center;
+  padding-bottom: 24px;
+	font-size: clamp(1.25rem, 0.8rem + 1.92vw, 2rem);
+}
+
+.section-faq {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: clamp(1rem, 0.94rem + 0.26vw, 1.25rem);
+  /* font-size:20px-16px; */
+}
+
+.faq-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.faq-item {
+  max-width: 850px;
+  border: 3px solid #000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px auto;
+  background-color: #fff;
+}
+
+.faq-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 20px 88px;
+  background-color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+}
+
+.faq-q-btn,
+.faq-a-btn{
+  position: relative;
+}
+
+.faq-q-btn::before,
+.faq-a-btn::before{
+  position: absolute;
+  content: "";
+  background-image: url(../../images/case/manufacturing/faq-q.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 40px;
+  left: -48px;
+  top: -8px;
+}
+
+.faq-a-btn::before{
+  background-image: url(../../images/case/manufacturing/faq-a.webp);
+  top: -4px;
+}
+
+.toggle-btn {
+  border: none;
+  background: none;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  color: #05ABF2;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 64px 0 88px;
+  font-size: clamp(0.875rem, 0.845rem + 0.13vw, 1rem);
+    /* font-size:16px-14px; */
+  line-height: 1.875;
+  background-color: #fff;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+/* --- Active Styles --- */
+
+.faq-item.active .faq-answer {
+  max-height: 1000px; /* 十分に大きな値で制限を回避 */
+  margin-bottom: 20px;
+}
+
+.faq-item.active .toggle-btn {
+  content: "-";
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 835px) {
+
+.faq-item:nth-child(4) .faq-header .faq-question .faq-q-btn{
+  top: -10px;
+}
+
+.faq-item:nth-child(4) .faq-answer .faq-item_4th_p_title{
+ padding-bottom: 8px;
+}
+
+.faq-item:nth-child(4) .faq-answer .faq-item_4th_p_under{
+  padding-top: 8px;
+}
+
+.faq-item:nth-child(4) .faq-answer .faq-item_4th_li{
+  text-indent: -14px;
+  padding-left: 14px;
+}
+
+.faq-q-btn::before,
+.faq-a-btn::before {
+  width: 24px;
+  height: 30px;
+  left: -35px;
+}
+
+.faq-q-btn::before{
+  top: 5px;
+}
+
+.faq-a-btn::before{
+  top: -4px;
+}
+
+.faq-header {
+  padding: 20px 8px 20px 48px;
+}
+
+.faq-answer{
+ padding: 0 20px 0 48px;
+}
+
+.faq-item.active .faq-answer {
+  padding: 20px 20px 20px 48px;
+  max-height: 285px !important;
+  margin-bottom: 0px;
+}
+
+}
+
+/* フェードインCSS */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);  /* 下からフェードインする */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);  /* 元の位置に戻る */
+}
+
+/* フォームCSS */
+
+.manufacturing .section-form-cont {
+    position: relative;
+    width: 100%;
+	height: 700px;
+    overflow: hidden;
+}
+
+
+.manufacturing .option-list, .form-content {
+    width: 100%;
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.manufacturing .option-list.active, .form-content.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.manufacturing .option-list {
+    z-index: 1;
+}
+
+.manufacturing .form-content {
+    z-index: 2;
+    transform: translateX(100%); /* 初期状態で画面外にスライド */
+}
+
+.manufacturing .form-content.active {
+    transform: translateX(0);
+	box-sizing: border-box;
+    padding-top: 64px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manufacturing .hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.manufacturing .show {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+
+.manufacturing .back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 新たに追加：高さを維持する */
+.manufacturing .section-form-cont-resize {
+    height: auto;
+    animation: adjustHeight 0.6s ease-in-out;
+}
+
+@media screen and (max-width:850px){
+	.manufacturing .section-form-cont{
+		min-height: 618px;
+		height: 710px;
+	}
+}
+
+.manufacturing .contact_content {
+    height: 80px;
+}
+
+.manufacturing .form-label-name{
+	font-size:1rem;
+}
+
+.manufacturing .submit-button {
+	padding: 8px 115px;
+}
+
+.manufacturing .wpcf7-form p {
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width:750px){
+	.section-form-cont-title {
+    padding-top: 61px;
+}
+	.manufacturing .form-content.active{
+/* 		max-width:300px; */
+		padding-top: 0px;
+		height: 100%;
+		padding: 20px;
+	}
+	
+	.manufacturing .form-label-name{
+	font-size:0.9rem;
+}
+	.manufacturing .contact_content {
+    height: 64px;
+}
+}
+
+@media screen and (max-width:380px){
+	.manufacturing .form-content.active{
+		height:100%;
+		min-height:100vh;
+	}
+	.manufacturing .section-form-cont {
+        min-height: 100vh;
+        height: 90%;
+    }
+}
+
+/* 戻るボタン実装 */
+
+.manufacturing .wpcf7-form p:last-child{
+	position:relative;
+}
+
+#backButton{
+	position:absolute;
+	bottom: 51px;
+	border:none;
+	background-color:#fff;
+	cursor:pointer;
+}
+
+#backButton span{
+	border-bottom:1px solid;
+	color:#000;
+}

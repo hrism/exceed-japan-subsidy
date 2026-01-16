@@ -1,0 +1,62 @@
+# WordPress Core (カスタマイズしない場合は除外)
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/license.txt
+/readme.html
+/xmlrpc.php
+
+# wp-content内で除外するもの
+/wp-content/uploads/
+/wp-content/upgrade/
+/wp-content/cache/
+/wp-content/backup*/
+/wp-content/advanced-cache.php
+/wp-content/wp-cache-config.php
+/wp-content/blogs.dir/
+/wp-content/languages/
+
+# プラグイン生成ファイル
+/wp-content/wflogs/
+/wp-content/siteguard/
+/wp-content/ai1wm-backups/
+
+# プラグイン（公開プラグインはComposer等で管理推奨）
+/wp-content/plugins/
+
+# テーマ（カスタムテーマのみ追跡）
+/wp-content/themes/twentytwenty*/
+/wp-content/themes/index.php
+
+# 設定ファイル（機密情報を含む）
+wp-config.php
+.htaccess
+.user.ini
+
+# ログファイル
+*.log
+/wp-content/debug.log
+
+# OS固有のファイル
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# エディタ・IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node.js（ビルドツール使用時）
+node_modules/
+package-lock.json
+
+# その他
+*.sql
+*.sql.gz
+*.tar.gz
+*.zip
+/default_page.png
