@@ -33,6 +33,7 @@
 wp-config.php
 .htaccess
 .user.ini
+.netrc
 
 # ログファイル
 *.log
@@ -60,3 +61,12 @@ package-lock.json
 *.tar.gz
 *.zip
 /default_page.png
+
+# Astroビルド出力
+/subsidy/
+
+# スクリーンショット（確認用）
+/*.png
+
+# Claude Code
+/.claude/

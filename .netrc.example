@@ -1,0 +1,3 @@
+machine ftp.example.com
+login your_username
+password your_password
