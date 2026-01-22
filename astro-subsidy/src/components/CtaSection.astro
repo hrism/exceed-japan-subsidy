@@ -9,20 +9,20 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
 ---
 
 <section id={id} class="cta-section relative py-24 px-4 text-white text-center overflow-hidden">
-  <!-- 斜めの区切り -->
+  {/* 斜めの区切り */}
   <div class={`absolute -top-1 left-0 w-full h-16 ${topBgColor}`} style="clip-path: polygon(0 0, 100% 0, 100% 30%, 0 100%);"></div>
 
-  <!-- グラデーション背景 -->
+  {/* グラデーション背景 */}
   <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-primary/80"></div>
 
-  <!-- テクスチャオーバーレイ -->
+  {/* テクスチャオーバーレイ */}
   <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 20% 50%, rgba(242,5,5,0.3) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 30%), radial-gradient(circle at 60% 80%, rgba(242,5,5,0.2) 0%, transparent 40%);"></div>
 
-  <!-- ドットパターン -->
+  {/* ドットパターン */}
   <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 24px 24px;"></div>
 
   <div class="relative z-10 max-w-2xl mx-auto">
-    <!-- メインコピー -->
+    {/* メインコピー */}
     <h2 class="cta-animate text-2xl md:text-4xl font-bold !mb-8 leading-relaxed">
       <span class="inline-block relative">
         <span class="absolute -left-4 top-0 text-primary text-3xl">&#10078;</span>
@@ -34,14 +34,14 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
       </span>
     </h2>
 
-    <!-- かんたん訴求 -->
+    {/* かんたん訴求 */}
     <div class="cta-animate inline-flex items-center justify-center gap-3 mb-8 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full">
       <span class="text-white text-xl md:text-2xl font-bold">かんたん！</span>
       <span class="inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-primary rounded-full text-white text-2xl md:text-3xl font-bold shadow-lg cta-number">3</span>
       <span class="text-white text-xl md:text-2xl font-bold">分で完了！</span>
     </div>
 
-    <!-- CTAボタン -->
+    {/* CTAボタン */}
     <div class="cta-animate flex flex-col sm:flex-row justify-center gap-4">
       <a href="https://exceed-japan.com/contact" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#F97316] to-[#EF4444] hover:from-[#EA580C] hover:to-[#DC2626] text-white font-bold text-lg md:text-xl px-10 py-5 rounded-lg shadow-xl transition-all hover:scale-105">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>

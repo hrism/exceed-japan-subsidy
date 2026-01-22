@@ -6,29 +6,28 @@ import CtaSection from '../components/CtaSection.astro';
 
 const themeUrl = '/wp-content/themes/exceed-custom-theme';
 ---
-
 <Layout title="中小企業新事業進出補助金 | Exceed Japan">
   <Header />
 
-  <!-- メインビジュアル -->
+  {/* メインビジュアル */}
   <section class="relative flex items-center overflow-hidden bg-gray-100">
-    <!-- 背景デザイン -->
+    {/* 背景デザイン */}
     <div class="absolute inset-0">
       <div class="absolute top-0 left-0 w-full h-full bg-[linear-gradient(135deg,#f5f5f5_25%,transparent_25%),linear-gradient(225deg,#f5f5f5_25%,transparent_25%),linear-gradient(45deg,#f5f5f5_25%,transparent_25%),linear-gradient(315deg,#f5f5f5_25%,#e8e8e8_25%)] bg-[size:20px_20px]"></div>
     </div>
 
-    <!-- 装飾の赤エリア -->
+    {/* 装飾の赤エリア */}
     <div id="hero-slant" class="absolute top-0 right-0 w-full h-full clip-path-slant">
-      <!-- ベース色レイヤー -->
+      {/* ベース色レイヤー */}
       <div class="absolute inset-0 bg-white hero-color-layer"></div>
-      <!-- テクスチャレイヤー -->
+      {/* テクスチャレイヤー */}
       <div class="absolute inset-0 hero-texture opacity-0"></div>
     </div>
 
-    <!-- コンテンツ -->
+    {/* コンテンツ */}
     <div class="relative z-10 w-full">
       <div class="max-w-7xl mx-auto px-4 md:px-8 py-12 md:py-20 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-        <!-- 左側：メイン情報 -->
+        {/* 左側：メイン情報 */}
         <div class="md:w-1/2 space-y-8">
           <div id="hero-badge" class="hero-animate inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm border border-gray-200">
             <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
@@ -55,7 +54,7 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
 
         </div>
 
-        <!-- 右側：ポイント -->
+        {/* 右側：ポイント */}
         <div id="hero-support" class="hero-animate md:w-1/2 text-white space-y-6 md:pl-16">
           <div class="space-y-4">
             <p class="text-white text-sm font-display tracking-wider font-medium">SUPPORT POINT</p>
@@ -117,7 +116,7 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
 
   <CtaSection id="cta-section-top" topBgColor="bg-gray-100" />
 
-  <!-- 補助金概要 -->
+  {/* 補助金概要 */}
   <section class="py-20 px-4">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-center !mb-12">
@@ -137,7 +136,7 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
     </div>
   </section>
 
-  <!-- 補助金説明 -->
+  {/* 補助金説明 */}
   <section class="py-20 px-4 bg-gray-100">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-center !mb-12">
@@ -157,7 +156,7 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
     </div>
   </section>
 
-  <!-- 補助対象経費 -->
+  {/* 補助対象経費 */}
   <section class="py-20 px-4">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-center !mb-12 ">
@@ -175,8 +174,167 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
     </div>
   </section>
 
-  <!-- お悩み相談 -->
+  {/* 活用事例 */}
   <section class="py-20 px-4 bg-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-center !mb-12">
+        <span class="block text-sm text-primary font-display tracking-wider mb-2">USE CASES</span>
+        <span class="text-2xl md:text-3xl font-bold">活用事例</span>
+      </h2>
+      <div class="space-y-8">
+        {/* 事例1: 飲食店からスパイス卸業 */}
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-2/5 relative aspect-[4/3] md:[aspect-ratio:unset]">
+              <img src="/subsidy/images/case01.webp" alt="飲食店からスパイス卸業への新事業進出" class="absolute inset-0 w-full !h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded">事例 1</span>
+            </div>
+            {/* コンテンツ */}
+            <div class="md:w-3/5 p-6 md:p-8">
+              <h3 class="text-xl font-bold mb-4 text-gray-900">飲食店からスパイス卸業への新事業進出</h3>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">飲食業 → 卸売業</span>
+              </div>
+              <div class="grid md:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <p class="text-xs text-gray-500 mb-1">従来事業</p>
+                  <p class="text-sm text-gray-700">カレー専門店の運営</p>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500 mb-1">新事業</p>
+                  <p class="text-sm text-gray-700">飲食店向けスパイス卸専門事業</p>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600 leading-relaxed mb-4">カレー屋として培った独自スパイス配合ノウハウを商品化。小規模飲食店・個人店向けに業務用スパイスを卸販売し、レシピ提案・メニュー開発サポートもセットで提供。</p>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <p class="text-xs text-primary font-bold mb-2">補助金活用内容</p>
+                <ul class="text-xs text-gray-600 space-y-1">
+                  <li>・スパイス加工・充填用機械設備の導入</li>
+                  <li>・EC・受発注管理システムの構築</li>
+                  <li>・業務用パッケージ・ブランド開発</li>
+                  <li>・展示会・販路開拓用の広告費</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 事例2: 美容サロンから化粧品ブランド */}
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+          <div class="flex flex-col md:flex-row-reverse">
+            <div class="md:w-2/5 relative aspect-[4/3] md:[aspect-ratio:unset]">
+              <img src="/subsidy/images/case02.webp" alt="美容サロンから化粧品ブランド事業への進出" class="absolute inset-0 w-full !h-full object-cover" />
+              <span class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded">事例 2</span>
+            </div>
+            {/* コンテンツ */}
+            <div class="md:w-3/5 p-6 md:p-8">
+              <h3 class="text-xl font-bold mb-4 text-gray-900">美容サロンから化粧品ブランド事業への進出</h3>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">美容サービス業 → 製造小売業（D2C）</span>
+              </div>
+              <div class="grid md:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <p class="text-xs text-gray-500 mb-1">従来事業</p>
+                  <p class="text-sm text-gray-700">エステサロンの運営</p>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500 mb-1">新事業</p>
+                  <p class="text-sm text-gray-700">オリジナル化粧品の開発・販売</p>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600 leading-relaxed mb-4">顧客の肌データ・施術実績の蓄積と化粧品選定ノウハウを活かし、サロン発オリジナル化粧品を開発。店舗内販売からEC・全国市場への進出を実現。</p>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <p class="text-xs text-primary font-bold mb-2">補助金活用内容</p>
+                <ul class="text-xs text-gray-600 space-y-1">
+                  <li>・化粧品OEM開発費・試作費</li>
+                  <li>・ECサイト構築・決済システム導入</li>
+                  <li>・パッケージ・ブランディングデザイン費</li>
+                  <li>・広告宣伝・SNSマーケティング費</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 事例3: 運送業から物流DX支援 */}
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-2/5 relative aspect-[4/3] md:[aspect-ratio:unset]">
+              <img src="/subsidy/images/case03.webp" alt="運送業から物流DX支援サービスへの進出" class="absolute inset-0 w-full !h-full object-cover" />
+              <span class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded">事例 3</span>
+            </div>
+            {/* コンテンツ */}
+            <div class="md:w-3/5 p-6 md:p-8">
+              <h3 class="text-xl font-bold mb-4 text-gray-900">運送業から物流DX支援サービスへの進出</h3>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">運送業 → IT・物流支援サービス業</span>
+              </div>
+              <div class="grid md:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <p class="text-xs text-gray-500 mb-1">従来事業</p>
+                  <p class="text-sm text-gray-700">地域密着型の配送・運輸業</p>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500 mb-1">新事業</p>
+                  <p class="text-sm text-gray-700">配送管理・業務最適化システム提供</p>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600 leading-relaxed mb-4">自社配送業務から他社向け支援サービスへ転換。労働集約型からIT活用型・ストック型モデルへの進出を実現し、現場ノウハウの仕組み化・横展開を図る。</p>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <p class="text-xs text-primary font-bold mb-2">補助金活用内容</p>
+                <ul class="text-xs text-gray-600 space-y-1">
+                  <li>・配送管理・ルート最適化システム開発</li>
+                  <li>・ドライバー管理・勤怠連携システム構築</li>
+                  <li>・クラウドインフラ整備</li>
+                  <li>・サービス販促用Web・営業資料制作</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 事例4: 農業から加工食品ブランド */}
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+          <div class="flex flex-col md:flex-row-reverse">
+            <div class="md:w-2/5 relative aspect-[4/3] md:[aspect-ratio:unset]">
+              <img src="/subsidy/images/case04.webp" alt="農業から加工食品・ブランド事業への進出" class="absolute inset-0 w-full !h-full object-cover" />
+              <span class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded">事例 4</span>
+            </div>
+            {/* コンテンツ */}
+            <div class="md:w-3/5 p-6 md:p-8">
+              <h3 class="text-xl font-bold mb-4 text-gray-900">農業から加工食品・ブランド事業への進出</h3>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">農業 → 食品製造・小売業</span>
+              </div>
+              <div class="grid md:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <p class="text-xs text-gray-500 mb-1">従来事業</p>
+                  <p class="text-sm text-gray-700">農作物の生産・出荷（一次産業）</p>
+                </div>
+                <div>
+                  <p class="text-xs text-gray-500 mb-1">新事業</p>
+                  <p class="text-sm text-gray-700">加工食品ブランドの開発・販売</p>
+                </div>
+              </div>
+              <p class="text-sm text-gray-600 leading-relaxed mb-4">原料供給中心から付加価値型製造・販売へ転換。卸出荷から自社ブランド・直接販売モデルへ進出し、農業ノウハウを活かした差別化商品を開発。</p>
+              <div class="bg-gray-50 rounded-lg p-4">
+                <p class="text-xs text-primary font-bold mb-2">補助金活用内容</p>
+                <ul class="text-xs text-gray-600 space-y-1">
+                  <li>・加工・充填・冷凍設備導入</li>
+                  <li>・商品開発・試作費</li>
+                  <li>・パッケージ・ブランドデザイン費</li>
+                  <li>・ECサイト構築・販促費</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* お悩み相談 */}
+  <section class="py-20 px-4">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-center !mb-12">
         <span class="block text-sm text-primary font-display tracking-wider mb-2">WORRIES</span>
@@ -200,8 +358,8 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
     </div>
   </section>
 
-  <!-- 採択事例 -->
-  <section class="py-20 px-4">
+  {/* 採択事例 */}
+  {/* <section class="py-20 px-4">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-center !mb-12">
         <span class="block text-sm text-primary font-display tracking-wider mb-2">CASE STUDIES</span>
@@ -242,9 +400,9 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
 
-  <!-- SDGs支援メッセージ -->
+  {/* SDGs支援メッセージ */}
   <section class="py-20 px-4 bg-gray-100">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="!mb-12">
@@ -258,7 +416,7 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
     </div>
   </section>
 
-  <!-- サポートメリット -->
+  {/* サポートメリット */}
   <section class="py-20 px-4 bg-primary">
     <div class="max-w-4xl mx-auto">
       <h2 class="text-center !mb-12 text-white">
@@ -285,7 +443,7 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
     </div>
   </section>
 
-  <!-- サポートフロー -->
+  {/* サポートフロー */}
   <section class="py-20 px-4">
     <div class="max-w-5xl mx-auto">
       <h2 class="text-center !mb-12">
@@ -313,7 +471,7 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
     </div>
   </section>
 
-  <!-- FAQ -->
+  {/* FAQ */}
   <section class="py-20 px-4 bg-gray-100">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-center !mb-12">
