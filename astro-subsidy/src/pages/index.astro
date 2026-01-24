@@ -5,6 +5,62 @@ import Footer from '../components/Footer.astro';
 import CtaSection from '../components/CtaSection.astro';
 
 const themeUrl = '/wp-content/themes/exceed-custom-theme';
+
+// 活用事例データ
+const useCases = [
+  {
+    id: 1,
+    title: '飲食店からスパイス卸業への新事業進出',
+    tag: '飲食業 → 卸売業',
+    beforeImage: '/subsidy/images/case01-0.webp',
+    afterImage: '/subsidy/images/case01.webp',
+    beforeAlt: '従来事業：カレー専門店',
+    afterAlt: '新事業：スパイス卸業',
+    before: { industry: '飲食業', content: 'カレー専門店' },
+    after: { industry: '卸売業', content: 'スパイス卸販売' },
+    point: 'BtoC（自社店舗）→ BtoB（他店舗卸売）への事業領域の転換',
+    usage: '加工設備導入、EC構築、パッケージ開発、販路開拓',
+  },
+  {
+    id: 2,
+    title: '美容サロンから化粧品ブランド事業への進出',
+    tag: '美容サービス業 → 製造小売業（D2C）',
+    beforeImage: '/subsidy/images/case02-0.webp',
+    afterImage: '/subsidy/images/case02.webp',
+    beforeAlt: '従来事業：エステサロン',
+    afterAlt: '新事業：化粧品ブランド',
+    before: { industry: '美容サービス業', content: 'エステサロン運営' },
+    after: { industry: '製造小売業', content: '化粧品D2C' },
+    point: 'サービス提供 → プロダクト販売・EC全国展開への事業転換',
+    usage: 'OEM開発、ECサイト構築、ブランディング、広告宣伝',
+  },
+  {
+    id: 3,
+    title: '運送業から物流DX支援サービスへの進出',
+    tag: '運送業 → IT・物流支援サービス業',
+    beforeImage: '/subsidy/images/case03-0.webp',
+    afterImage: '/subsidy/images/case03.webp',
+    beforeAlt: '従来事業：運送業',
+    afterAlt: '新事業：物流DX支援',
+    before: { industry: '運送業', content: '配送・運輸業' },
+    after: { industry: 'IT支援サービス', content: '物流DX SaaS' },
+    point: '労働集約型 → IT活用型・ストック型SaaSへの事業転換',
+    usage: 'システム開発、クラウドインフラ、Web制作、営業資料',
+  },
+  {
+    id: 4,
+    title: '農業から加工食品・ブランド事業への進出',
+    tag: '農業 → 食品製造・小売業',
+    beforeImage: '/subsidy/images/case04-0.webp',
+    afterImage: '/subsidy/images/case04.webp',
+    beforeAlt: '従来事業：農業',
+    afterAlt: '新事業：加工食品ブランド',
+    before: { industry: '農業', content: '農作物の生産・出荷' },
+    after: { industry: '食品製造・小売', content: '加工食品ブランド' },
+    point: '原料供給 → 付加価値型製造・自社ブランド直販への事業転換',
+    usage: '加工設備導入、商品開発、パッケージデザイン、EC構築',
+  },
+];
 ---
 <Layout title="中小企業新事業進出補助金 | Exceed Japan">
   <Header />
@@ -175,6 +231,7 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
   </section>
 
   {/* 活用事例 */}
+  {/* TODO：補助金概要セクションの次に移動 */}
   <section class="py-20 px-4 bg-gray-100">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-center !mb-12">
@@ -182,153 +239,89 @@ const themeUrl = '/wp-content/themes/exceed-custom-theme';
         <span class="text-2xl md:text-3xl font-bold">活用事例</span>
       </h2>
       <div class="space-y-8">
-        {/* 事例1: 飲食店からスパイス卸業 */}
-        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
-          <div class="flex flex-col md:flex-row">
-            <div class="md:w-2/5 relative aspect-[4/3] md:[aspect-ratio:unset]">
-              <img src="/subsidy/images/case01.webp" alt="飲食店からスパイス卸業への新事業進出" class="absolute inset-0 w-full !h-full object-cover" />
-              <span class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded">事例 1</span>
-            </div>
-            {/* コンテンツ */}
-            <div class="md:w-3/5 p-6 md:p-8">
-              <h3 class="text-xl font-bold mb-4 text-gray-900">飲食店からスパイス卸業への新事業進出</h3>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">飲食業 → 卸売業</span>
-              </div>
-              <div class="grid md:grid-cols-2 gap-4 mb-4">
-                <div>
-                  <p class="text-xs text-gray-500 mb-1">従来事業</p>
-                  <p class="text-sm text-gray-700">カレー専門店の運営</p>
+        {useCases.map((c) => (
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+            <div class={`flex flex-col ${c.id % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+              <div class="md:w-2/5 relative aspect-[4/3] md:aspect-auto md:h-[400px]">
+                {/* スマホ：横分割（50:50） */}
+                <div class="md:hidden absolute inset-0">
+                  {/* 新事業（下層・全体を覆う） */}
+                  <div class="absolute inset-0 z-0 bg-cover bg-center" style={`background-image: url('${c.afterImage}')`}>
+                    <span class="absolute top-3 right-3 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">新事業</span>
+                  </div>
+                  {/* 従来事業（上層・clip-pathで左半分を表示） */}
+                  <div class="absolute inset-0 z-10 bg-cover bg-center saturate-50 brightness-90" style={`clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%); background-image: url('${c.beforeImage}')`}>
+                    <div class="absolute inset-0 bg-gray-900/30"></div>
+                  </div>
+                  <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                    <div class="bg-white rounded-full p-2 shadow-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <p class="text-xs text-gray-500 mb-1">新事業</p>
-                  <p class="text-sm text-gray-700">飲食店向けスパイス卸専門事業</p>
-                </div>
-              </div>
-              <p class="text-sm text-gray-600 leading-relaxed mb-4">カレー屋として培った独自スパイス配合ノウハウを商品化。小規模飲食店・個人店向けに業務用スパイスを卸販売し、レシピ提案・メニュー開発サポートもセットで提供。</p>
-              <div class="bg-gray-50 rounded-lg p-4">
-                <p class="text-xs text-primary font-bold mb-2">補助金活用内容</p>
-                <ul class="text-xs text-gray-600 space-y-1">
-                  <li>・スパイス加工・充填用機械設備の導入</li>
-                  <li>・EC・受発注管理システムの構築</li>
-                  <li>・業務用パッケージ・ブランド開発</li>
-                  <li>・展示会・販路開拓用の広告費</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 事例2: 美容サロンから化粧品ブランド */}
-        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
-          <div class="flex flex-col md:flex-row-reverse">
-            <div class="md:w-2/5 relative aspect-[4/3] md:[aspect-ratio:unset]">
-              <img src="/subsidy/images/case02.webp" alt="美容サロンから化粧品ブランド事業への進出" class="absolute inset-0 w-full !h-full object-cover" />
-              <span class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded">事例 2</span>
-            </div>
-            {/* コンテンツ */}
-            <div class="md:w-3/5 p-6 md:p-8">
-              <h3 class="text-xl font-bold mb-4 text-gray-900">美容サロンから化粧品ブランド事業への進出</h3>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">美容サービス業 → 製造小売業（D2C）</span>
-              </div>
-              <div class="grid md:grid-cols-2 gap-4 mb-4">
-                <div>
-                  <p class="text-xs text-gray-500 mb-1">従来事業</p>
-                  <p class="text-sm text-gray-700">エステサロンの運営</p>
-                </div>
-                <div>
-                  <p class="text-xs text-gray-500 mb-1">新事業</p>
-                  <p class="text-sm text-gray-700">オリジナル化粧品の開発・販売</p>
+                {/* PC：縦分割（50:50） */}
+                <div class="hidden md:block absolute inset-0">
+                  {/* 新事業（下層・全体を覆う） */}
+                  <div class="absolute inset-0 z-0 bg-cover bg-center" style={`background-image: url('${c.afterImage}')`}>
+                    <span class="absolute bottom-3 left-3 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">新事業</span>
+                  </div>
+                  {/* 従来事業（上層・clip-pathで上半分を表示） */}
+                  <div class="absolute inset-0 z-10 bg-cover bg-center saturate-50 brightness-90" style={`clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%); background-image: url('${c.beforeImage}')`}>
+                    <div class="absolute inset-0 bg-gray-900/30"></div>
+                    <span class="absolute top-3 left-3 bg-gray-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">従来事業</span>
+                  </div>
+                  <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                    <div class="bg-white rounded-full p-2 shadow-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 5v14M19 12l-7 7-7-7"/>
+                    </svg>
+                  </div>
                 </div>
               </div>
-              <p class="text-sm text-gray-600 leading-relaxed mb-4">顧客の肌データ・施術実績の蓄積と化粧品選定ノウハウを活かし、サロン発オリジナル化粧品を開発。店舗内販売からEC・全国市場への進出を実現。</p>
-              <div class="bg-gray-50 rounded-lg p-4">
-                <p class="text-xs text-primary font-bold mb-2">補助金活用内容</p>
-                <ul class="text-xs text-gray-600 space-y-1">
-                  <li>・化粧品OEM開発費・試作費</li>
-                  <li>・ECサイト構築・決済システム導入</li>
-                  <li>・パッケージ・ブランディングデザイン費</li>
-                  <li>・広告宣伝・SNSマーケティング費</li>
-                </ul>
+                {/* 事例番号 */}
+                <span class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded z-30">事例 {c.id}</span>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 事例3: 運送業から物流DX支援 */}
-        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
-          <div class="flex flex-col md:flex-row">
-            <div class="md:w-2/5 relative aspect-[4/3] md:[aspect-ratio:unset]">
-              <img src="/subsidy/images/case03.webp" alt="運送業から物流DX支援サービスへの進出" class="absolute inset-0 w-full !h-full object-cover" />
-              <span class="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded">事例 3</span>
-            </div>
-            {/* コンテンツ */}
-            <div class="md:w-3/5 p-6 md:p-8">
-              <h3 class="text-xl font-bold mb-4 text-gray-900">運送業から物流DX支援サービスへの進出</h3>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">運送業 → IT・物流支援サービス業</span>
-              </div>
-              <div class="grid md:grid-cols-2 gap-4 mb-4">
-                <div>
-                  <p class="text-xs text-gray-500 mb-1">従来事業</p>
-                  <p class="text-sm text-gray-700">地域密着型の配送・運輸業</p>
+              {/* コンテンツ */}
+              <div class="md:w-3/5 p-6 md:p-8">
+                <h3 class="text-xl font-bold mb-4 text-gray-900">{c.title}</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">{c.tag}</span>
                 </div>
-                <div>
-                  <p class="text-xs text-gray-500 mb-1">新事業</p>
-                  <p class="text-sm text-gray-700">配送管理・業務最適化システム提供</p>
+                {/* 事業転換セクション */}
+                <div class="border border-gray-200 rounded-lg p-3 mb-4">
+                  <p class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    事業転換
+                  </p>
+                  <div class="grid grid-cols-2 gap-2">
+                    <div class="bg-gray-50 rounded-lg p-2">
+                      <p class="text-[10px] font-bold text-gray-700 mb-1 border-b border-gray-200 pb-1">従来事業</p>
+                      <p class="text-[10px] text-gray-500 mb-0.5">業種：<span class="text-gray-700">{c.before.industry}</span></p>
+                      <p class="text-[10px] text-gray-500">内容：<span class="text-gray-700">{c.before.content}</span></p>
+                    </div>
+                    <div class="bg-primary/5 rounded-lg p-2 border border-primary/20">
+                      <p class="text-[10px] font-bold text-primary mb-1 border-b border-primary/20 pb-1">新事業</p>
+                      <p class="text-[10px] text-gray-500 mb-0.5">業種：<span class="text-gray-700">{c.after.industry}</span></p>
+                      <p class="text-[10px] text-gray-500">内容：<span class="text-gray-700">{c.after.content}</span></p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <p class="text-sm text-gray-600 leading-relaxed mb-4">自社配送業務から他社向け支援サービスへ転換。労働集約型からIT活用型・ストック型モデルへの進出を実現し、現場ノウハウの仕組み化・横展開を図る。</p>
-              <div class="bg-gray-50 rounded-lg p-4">
-                <p class="text-xs text-primary font-bold mb-2">補助金活用内容</p>
-                <ul class="text-xs text-gray-600 space-y-1">
-                  <li>・配送管理・ルート最適化システム開発</li>
-                  <li>・ドライバー管理・勤怠連携システム構築</li>
-                  <li>・クラウドインフラ整備</li>
-                  <li>・サービス販促用Web・営業資料制作</li>
-                </ul>
+                {/* 新規性・進出性のポイント */}
+                <div class="bg-amber-50 rounded-lg p-2 mb-3 border border-amber-200">
+                  <p class="text-[10px] font-bold text-amber-700 mb-1">新規性・進出性のポイント</p>
+                  <p class="text-[10px] text-gray-700" set:html={c.point.replace(/→/g, '→ <strong>').replace(/への/, '</strong>への<strong>') + '</strong>'} />
+                </div>
+                {/* 補助金活用内容 */}
+                <div class="bg-gray-50 rounded-lg p-2">
+                  <p class="text-[10px] text-primary font-bold mb-1">補助金活用内容（例）</p>
+                  <p class="text-[10px] text-gray-600">{c.usage}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* 事例4: 農業から加工食品ブランド */}
-        <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
-          <div class="flex flex-col md:flex-row-reverse">
-            <div class="md:w-2/5 relative aspect-[4/3] md:[aspect-ratio:unset]">
-              <img src="/subsidy/images/case04.webp" alt="農業から加工食品・ブランド事業への進出" class="absolute inset-0 w-full !h-full object-cover" />
-              <span class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded">事例 4</span>
-            </div>
-            {/* コンテンツ */}
-            <div class="md:w-3/5 p-6 md:p-8">
-              <h3 class="text-xl font-bold mb-4 text-gray-900">農業から加工食品・ブランド事業への進出</h3>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">農業 → 食品製造・小売業</span>
-              </div>
-              <div class="grid md:grid-cols-2 gap-4 mb-4">
-                <div>
-                  <p class="text-xs text-gray-500 mb-1">従来事業</p>
-                  <p class="text-sm text-gray-700">農作物の生産・出荷（一次産業）</p>
-                </div>
-                <div>
-                  <p class="text-xs text-gray-500 mb-1">新事業</p>
-                  <p class="text-sm text-gray-700">加工食品ブランドの開発・販売</p>
-                </div>
-              </div>
-              <p class="text-sm text-gray-600 leading-relaxed mb-4">原料供給中心から付加価値型製造・販売へ転換。卸出荷から自社ブランド・直接販売モデルへ進出し、農業ノウハウを活かした差別化商品を開発。</p>
-              <div class="bg-gray-50 rounded-lg p-4">
-                <p class="text-xs text-primary font-bold mb-2">補助金活用内容</p>
-                <ul class="text-xs text-gray-600 space-y-1">
-                  <li>・加工・充填・冷凍設備導入</li>
-                  <li>・商品開発・試作費</li>
-                  <li>・パッケージ・ブランドデザイン費</li>
-                  <li>・ECサイト構築・販促費</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
