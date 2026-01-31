@@ -20,6 +20,9 @@ const useCases = [
     after: { industry: '卸売業', content: 'スパイス卸販売' },
     point: 'BtoC（自社店舗）→ BtoB（他店舗卸売）への事業領域の転換',
     usage: '加工設備導入、EC構築、パッケージ開発、販路開拓',
+    amount: '1,200万円',
+    headline: '新事業で年商3,000万円、売上2倍に！',
+    comment: '補助金1,200万円を活用して加工設備とECサイトを導入。今では全国50店舗以上に卸し、新事業だけで年商3,000万円を達成！店舗売上と合わせて売上が2倍になりました。',
   },
   {
     id: 2,
@@ -33,6 +36,9 @@ const useCases = [
     after: { industry: '製造小売業', content: '化粧品D2C' },
     point: 'サービス提供 → プロダクト販売・EC全国展開への事業転換',
     usage: 'OEM開発、ECサイト構築、ブランディング、広告宣伝',
+    amount: '2,300万円',
+    headline: '1年でEC月商500万円突破！',
+    comment: '補助金2,300万円でOEM開発とECサイトを構築。ブランド立ち上げから1年でEC月商500万円を突破！サロンの固定客だけでなく全国にファンができ、利益率も大幅アップしました。',
   },
   {
     id: 3,
@@ -46,6 +52,9 @@ const useCases = [
     after: { industry: 'IT支援サービス', content: '物流DX SaaS' },
     point: '労働集約型 → IT活用型・ストック型SaaSへの事業転換',
     usage: 'システム開発、クラウドインフラ、Web制作、営業資料',
+    amount: '4,000万円',
+    headline: '導入企業50社突破、安定収益の柱に！',
+    comment: '補助金4,000万円でSaaSシステムを開発。月額制で安定収益が得られるようになり、導入企業は50社を突破！運送業の波に左右されない第二の収益源ができました。',
   },
   {
     id: 4,
@@ -59,6 +68,9 @@ const useCases = [
     after: { industry: '食品製造・小売', content: '加工食品ブランド' },
     point: '原料供給 → 付加価値型製造・自社ブランド直販への事業転換',
     usage: '加工設備導入、商品開発、パッケージデザイン、EC構築',
+    amount: '1,600万円',
+    headline: '直販で年商2,500万円、利益率3倍！',
+    comment: '補助金1,600万円で加工設備とブランディングを実施。生野菜の3倍の価格で販売でき、利益率が大幅向上！直販で年商2,500万円を達成し、天候リスクも分散できました。',
   },
 ];
 ---
@@ -99,11 +111,11 @@ const useCases = [
 
           <div id="hero-stats" class="hero-animate flex flex-wrap gap-4">
             <div class="bg-white border-2 border-gray-900 rounded-xl px-6 py-4 shadow-[4px_4px_0_0_#F20505]">
-              <p class="text-xs text-gray-500 mb-1">補助上限額</p>
+              <p class="text-sm text-gray-500 mb-1">補助上限額</p>
               <p class="font-bold text-gray-900">最大<span class="text-3xl text-primary mx-1">9,000</span>万円</p>
             </div>
             <div class="bg-white border-2 border-gray-900 rounded-xl px-6 py-4 shadow-[4px_4px_0_0_#F20505]">
-              <p class="text-xs text-gray-500 mb-1">補助率</p>
+              <p class="text-sm text-gray-500 mb-1">補助率</p>
               <p class="font-bold text-gray-900"><span class="text-3xl text-primary">1/2</span>〜<span class="text-3xl text-primary">2/3</span></p>
             </div>
           </div>
@@ -192,6 +204,116 @@ const useCases = [
     </div>
   </section>
 
+  {/* 活用事例 */}
+  <section class="py-20 px-4 bg-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-center !mb-12">
+        <span class="block text-sm text-primary font-display tracking-wider mb-2">USE CASES</span>
+        <span class="text-2xl md:text-3xl font-bold">活用事例</span>
+      </h2>
+      <div class="space-y-8">
+        {useCases.map((c) => (
+          <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
+            <div class={`flex flex-col ${c.id % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
+              <div class="md:w-2/5 relative aspect-[4/3] md:aspect-auto md:h-[400px]">
+                {/* スマホ：横分割（50:50） */}
+                <div class="md:hidden absolute inset-0">
+                  {/* 新事業（下層・全体を覆う） */}
+                  <div class="absolute inset-0 z-0 bg-cover bg-center" style={`background-image: url('${c.afterImage}')`}>
+                    <span class="absolute top-3 right-3 bg-primary text-white text-sm font-bold px-2 py-0.5 rounded z-10">新事業</span>
+                  </div>
+                  {/* 従来事業（上層・clip-pathで左半分を表示） */}
+                  <div class="absolute inset-0 z-10 bg-cover bg-center saturate-75 brightness-95" style={`clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%); background-image: url('${c.beforeImage}')`}>
+                    <div class="absolute inset-0 bg-gray-900/30"></div>
+                  </div>
+                  <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                    <div class="bg-white rounded-full p-2 shadow-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                {/* PC：横分割（50:50） */}
+                <div class="hidden md:block absolute inset-0">
+                  {/* 新事業（下層・全体を覆う） */}
+                  <div class="absolute inset-0 z-0 bg-cover bg-center" style={`background-image: url('${c.afterImage}')`}>
+                    <span class="absolute top-3 right-3 bg-primary text-white text-sm font-bold px-2 py-0.5 rounded z-10">新事業</span>
+                  </div>
+                  {/* 従来事業（上層・clip-pathで左半分を表示） */}
+                  <div class="absolute inset-0 z-10 bg-cover bg-center saturate-75 brightness-95" style={`clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%); background-image: url('${c.beforeImage}')`}>
+                    <div class="absolute inset-0 bg-gray-900/30"></div>
+                  </div>
+                  <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                    <div class="bg-white rounded-full p-2 shadow-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+                {/* 事例番号 */}
+                <span class="absolute top-3 right-3 bg-primary text-white text-sm font-bold px-3 py-1 rounded z-30">事例 {c.id}</span>
+              </div>
+              {/* コンテンツ */}
+              <div class="md:w-3/5 p-6 md:p-8">
+                <h3 class="text-2xl font-bold mb-5 text-primary">{c.title}</h3>
+                {/* 事業転換セクション */}
+                <div class="bg-gray-100 rounded-lg p-5 mb-5">
+                  <div class="flex items-center gap-4">
+                    <div class="flex-1 text-center">
+                      <h5 class="font-bold text-gray-800 mb-2">従来事業</h5>
+                      <p class="text-gray-600">{c.before.industry}</p>
+                      <p class="text-gray-500">{c.before.content}</p>
+                    </div>
+                    <div class="flex-shrink-0">
+                      <div class="bg-white rounded-full p-2 shadow">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                          <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="flex-1 text-center">
+                      <h5 class="font-bold text-primary mb-2">新事業</h5>
+                      <p class="text-gray-600">{c.after.industry}</p>
+                      <p class="text-gray-500">{c.after.content}</p>
+                    </div>
+                  </div>
+                </div>
+                {/* 新規性・進出性のポイント */}
+                <div class="mb-4">
+                  <h4 class="font-bold text-gray-800 mb-1 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+                    新規性・進出性のポイント
+                  </h4>
+                  <p class="text-gray-700" set:html={c.point.replace(/→/g, '→ <strong class="text-primary">').replace(/への/, '</strong>への<strong class="text-primary">') + '</strong>'} />
+                </div>
+                {/* 補助金活用内容 */}
+                <div class="mb-5">
+                  <h4 class="font-bold text-gray-800 mb-1 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6M12 9v6"/></svg>
+                    補助金活用内容（例）
+                  </h4>
+                  <p class="text-gray-600 mb-2">{c.usage}</p>
+                  <p class="text-primary font-bold">採択金額：{c.amount}</p>
+                </div>
+                {/* 事業者からのコメント */}
+                <div class="bg-primary/10 rounded-lg p-5 border-l-4 border-primary">
+                  <h4 class="font-bold text-gray-800 mb-2 flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    事業者様の声
+                  </h4>
+                  <h5 class="text-xl font-bold text-primary mb-2">{c.headline}</h5>
+                  <p class="text-gray-700 leading-relaxed">{c.comment}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
   {/* 補助金説明 */}
   <section class="py-20 px-4 bg-gray-100">
     <div class="max-w-5xl mx-auto">
@@ -227,102 +349,6 @@ const useCases = [
           </li>
         ))}
       </ul>
-    </div>
-  </section>
-
-  {/* 活用事例 */}
-  {/* TODO：補助金概要セクションの次に移動 */}
-  <section class="py-20 px-4 bg-gray-100">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-center !mb-12">
-        <span class="block text-sm text-primary font-display tracking-wider mb-2">USE CASES</span>
-        <span class="text-2xl md:text-3xl font-bold">活用事例</span>
-      </h2>
-      <div class="space-y-8">
-        {useCases.map((c) => (
-          <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200">
-            <div class={`flex flex-col ${c.id % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
-              <div class="md:w-2/5 relative aspect-[4/3] md:aspect-auto md:h-[400px]">
-                {/* スマホ：横分割（50:50） */}
-                <div class="md:hidden absolute inset-0">
-                  {/* 新事業（下層・全体を覆う） */}
-                  <div class="absolute inset-0 z-0 bg-cover bg-center" style={`background-image: url('${c.afterImage}')`}>
-                    <span class="absolute top-3 right-3 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">新事業</span>
-                  </div>
-                  {/* 従来事業（上層・clip-pathで左半分を表示） */}
-                  <div class="absolute inset-0 z-10 bg-cover bg-center saturate-50 brightness-90" style={`clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%); background-image: url('${c.beforeImage}')`}>
-                    <div class="absolute inset-0 bg-gray-900/30"></div>
-                  </div>
-                  <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                    <div class="bg-white rounded-full p-2 shadow-lg">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                {/* PC：縦分割（50:50） */}
-                <div class="hidden md:block absolute inset-0">
-                  {/* 新事業（下層・全体を覆う） */}
-                  <div class="absolute inset-0 z-0 bg-cover bg-center" style={`background-image: url('${c.afterImage}')`}>
-                    <span class="absolute bottom-3 left-3 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded z-10">新事業</span>
-                  </div>
-                  {/* 従来事業（上層・clip-pathで上半分を表示） */}
-                  <div class="absolute inset-0 z-10 bg-cover bg-center saturate-50 brightness-90" style={`clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%); background-image: url('${c.beforeImage}')`}>
-                    <div class="absolute inset-0 bg-gray-900/30"></div>
-                    <span class="absolute top-3 left-3 bg-gray-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">従来事業</span>
-                  </div>
-                  <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-                    <div class="bg-white rounded-full p-2 shadow-lg">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 5v14M19 12l-7 7-7-7"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-                {/* 事例番号 */}
-                <span class="absolute top-3 right-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded z-30">事例 {c.id}</span>
-              </div>
-              {/* コンテンツ */}
-              <div class="md:w-3/5 p-6 md:p-8">
-                <h3 class="text-xl font-bold mb-4 text-gray-900">{c.title}</h3>
-                <div class="flex flex-wrap gap-2 mb-4">
-                  <span class="bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">{c.tag}</span>
-                </div>
-                {/* 事業転換セクション */}
-                <div class="border border-gray-200 rounded-lg p-3 mb-4">
-                  <p class="text-xs font-bold text-gray-800 mb-3 flex items-center gap-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    事業転換
-                  </p>
-                  <div class="grid grid-cols-2 gap-2">
-                    <div class="bg-gray-50 rounded-lg p-2">
-                      <p class="text-[10px] font-bold text-gray-700 mb-1 border-b border-gray-200 pb-1">従来事業</p>
-                      <p class="text-[10px] text-gray-500 mb-0.5">業種：<span class="text-gray-700">{c.before.industry}</span></p>
-                      <p class="text-[10px] text-gray-500">内容：<span class="text-gray-700">{c.before.content}</span></p>
-                    </div>
-                    <div class="bg-primary/5 rounded-lg p-2 border border-primary/20">
-                      <p class="text-[10px] font-bold text-primary mb-1 border-b border-primary/20 pb-1">新事業</p>
-                      <p class="text-[10px] text-gray-500 mb-0.5">業種：<span class="text-gray-700">{c.after.industry}</span></p>
-                      <p class="text-[10px] text-gray-500">内容：<span class="text-gray-700">{c.after.content}</span></p>
-                    </div>
-                  </div>
-                </div>
-                {/* 新規性・進出性のポイント */}
-                <div class="bg-amber-50 rounded-lg p-2 mb-3 border border-amber-200">
-                  <p class="text-[10px] font-bold text-amber-700 mb-1">新規性・進出性のポイント</p>
-                  <p class="text-[10px] text-gray-700" set:html={c.point.replace(/→/g, '→ <strong>').replace(/への/, '</strong>への<strong>') + '</strong>'} />
-                </div>
-                {/* 補助金活用内容 */}
-                <div class="bg-gray-50 rounded-lg p-2">
-                  <p class="text-[10px] text-primary font-bold mb-1">補助金活用内容（例）</p>
-                  <p class="text-[10px] text-gray-600">{c.usage}</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
     </div>
   </section>
 
@@ -362,7 +388,7 @@ const useCases = [
         <div class="bg-white border-3 border-gray-800 rounded-2xl p-6 shadow-[4px_4px_0_0_#F20505]">
           <div class="flex items-center gap-2 mb-4">
             <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">1,000万円</span>
-            <span class="bg-gray-800 text-white px-3 py-1 rounded text-xs">飲食業</span>
+            <span class="bg-gray-800 text-white px-3 py-1 rounded text-sm">飲食業</span>
           </div>
           <h3 class="font-bold mb-2">居酒屋からテイクアウト専門店への業態転換</h3>
           <p class="text-sm text-gray-600 leading-relaxed">コロナ禍で売上が激減した居酒屋が、テイクアウト専門店へ業態転換。新たな厨房設備の導入と店舗改装により、売上V字回復を達成。</p>
@@ -370,7 +396,7 @@ const useCases = [
         <div class="bg-white border-3 border-gray-800 rounded-2xl p-6 shadow-[4px_4px_0_0_#F20505]">
           <div class="flex items-center gap-2 mb-4">
             <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">2,000万円</span>
-            <span class="bg-gray-800 text-white px-3 py-1 rounded text-xs">製造業</span>
+            <span class="bg-gray-800 text-white px-3 py-1 rounded text-sm">製造業</span>
           </div>
           <h3 class="font-bold mb-2">金属加工業からEV部品製造への進出</h3>
           <p class="text-sm text-gray-600 leading-relaxed">従来の金属加工技術を活かし、EV（電気自動車）向け部品製造に参入。最新の加工機械を導入し、新規顧客の開拓に成功。</p>
@@ -378,7 +404,7 @@ const useCases = [
         <div class="bg-white border-3 border-gray-800 rounded-2xl p-6 shadow-[4px_4px_0_0_#F20505]">
           <div class="flex items-center gap-2 mb-4">
             <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">2,000万円</span>
-            <span class="bg-gray-800 text-white px-3 py-1 rounded text-xs">小売業</span>
+            <span class="bg-gray-800 text-white px-3 py-1 rounded text-sm">小売業</span>
           </div>
           <h3 class="font-bold mb-2">実店舗からECサイト運営への転換</h3>
           <p class="text-sm text-gray-600 leading-relaxed">地方の雑貨店がECサイトを新規構築。在庫管理システムの導入と物流体制の整備により、全国への販路拡大を実現。</p>
@@ -386,7 +412,7 @@ const useCases = [
         <div class="bg-white border-3 border-gray-800 rounded-2xl p-6 shadow-[4px_4px_0_0_#F20505]">
           <div class="flex items-center gap-2 mb-4">
             <span class="bg-primary text-white px-4 py-1 rounded-full text-sm font-bold">4,000万円</span>
-            <span class="bg-gray-800 text-white px-3 py-1 rounded text-xs">建設業</span>
+            <span class="bg-gray-800 text-white px-3 py-1 rounded text-sm">建設業</span>
           </div>
           <h3 class="font-bold mb-2">建設業から再生可能エネルギー事業への参入</h3>
           <p class="text-sm text-gray-600 leading-relaxed">建設業のノウハウを活かし、太陽光発電設備の設置事業に参入。専門機材の導入と人材育成により、新たな収益柱を確立。</p>
@@ -448,7 +474,7 @@ const useCases = [
           { step: '01', title: '無料相談・ヒアリング', desc: 'まずはお気軽にご相談ください。' },
           { step: '02', title: '補助金診断', desc: '最適な補助金をご提案いたします。' },
           { step: '03', title: '事業計画策定', desc: '採択率を高める事業計画書を作成。' },
-          { step: '04', title: '申請書類作成', desc: '必要書類を作成し、提出までサポート。' },
+          { step: '04', title: '申請書類作成支援', desc: '必要書類を作成支援し、提出までサポート。' },
           { step: '05', title: '採択・交付決定', desc: '採択後の交付申請もサポート。' },
           { step: '06', title: '事業実施', desc: '計画に沿った事業実施をサポート。' },
           { step: '07', title: '実績報告', desc: '実績報告書の作成をサポート。' },
