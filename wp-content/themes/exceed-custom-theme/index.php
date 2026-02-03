@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NW6PBSZD');</script>
+<!-- End Google Tag Manager -->
 	<meta name="google-site-verification" content="ppGZLzGKeVRz46x4sIacfPaduxnLLzXKJdxYVSZMKOA" />
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +25,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<script type="text/javascript" charset="utf-8" src="https://kenga.tech/heatmaps-inpydktysrylphec.js"></script>
+
 <?php get_header(); // ヘッダーを呼び出し 
 ?>
 <main>
